@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS CLI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #ddd;
+        }
+        .toggle-btn {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #fff;
+        }
+        .dark-theme .header {
+            background-color: #222;
+        }
+        .dark-theme .toggle-btn {
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>AWS CLI (Command Line Interface)</h1>
+        <button class="toggle-btn" onclick="toggleTheme()">Dark Mode</button>
+    </header>
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>The AWS CLI is a tool that provides a unified interface for interacting with AWS services from the command line. It allows for the automation of AWS tasks and scripting through a command-line interface.</p>
+    </div>
+
+    <div class="section">
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Command Structure</strong>: Commands are structured as <code>aws &lt;service&gt; &lt;operation&gt;</code>. For example, <code>aws s3 ls</code> lists S3 buckets.</li>
+            <li><strong>Configuration</strong>: Configure CLI access using <code>aws configure</code>, which sets up your access key, secret key, region, and output format.</li>
+            <li><strong>Scripts and Automation</strong>: Ideal for writing scripts to automate tasks and integrate AWS services into workflows.</li>
+            <li><strong>Cross-Platform Support</strong>: Available on Windows, macOS, and Linux.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Points to Remember</h2>
+        <ul>
+            <li>Install the CLI and configure it with <code>aws configure</code> to start using it.</li>
+            <li>Use <code>aws help</code> to get information on commands and options.</li>
+            <li>Understand common commands for managing different AWS services.</li>
+            <li>Practice writing and running CLI commands for tasks like managing S3 buckets, EC2 instances, and IAM roles.</li>
+            <li>Be familiar with CLI syntax and options for various services.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            const button = document.querySelector('.toggle-btn');
+            button.textContent = document.body.classList.contains('dark-theme') ? 'Light Mode' : 'Dark Mode';
+        }
+    </script>
+</body>
+</html>

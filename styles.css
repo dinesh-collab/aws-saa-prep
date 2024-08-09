@@ -1,0 +1,169 @@
+/* Default (Light Mode) Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Light background */
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    min-height: 100vh;
+}
+
+html {
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFA500; /* Orange header */
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+    color: #fff;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.expand-all {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.expand-all:hover {
+    background-color: #e68900;
+}
+
+/* Dark Mode Styles */
+.dark-theme {
+    background-color: #000; /* Black background for dark mode */
+    color: #f0f0f0; /* Light text color for dark mode */
+}
+
+.dark-theme .header {
+    background-color: #555; /* Grey header for dark mode */
+}
+
+.dark-theme .toggle-btn {
+    background-color: #fff;
+    color: #333;
+}
+
+.dark-theme .expand-all {
+    background-color: #555;
+    color: #fff;
+}
+
+.dark-theme .expand-all:hover {
+    background-color: #444;
+}
+
+.dark-theme .left-panel {
+    background-color: #333; /* Dark grey for left panel */
+}
+
+.dark-theme .middle-panel {
+    background-color: #222; /* Darker grey for middle panel */
+}
+
+.dark-theme .right-panel {
+    background-color: #333; /* Dark grey for right panel */
+}
+
+.dark-theme a {
+    color: #f0f0f0;
+}
+
+.dark-theme a.selected {
+    color: #FFA500; /* Highlight selected topic */
+}
+
+/* Layout Styles */
+main {
+    display: flex;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.left-panel, .middle-panel, .right-panel {
+    padding: 10px;
+}
+
+.left-panel {
+    flex: 1;
+    background-color: #f0f0f0; /* Light grey for left panel in light mode */
+}
+
+.middle-panel {
+    flex: 2;
+    background-color: #fff; /* White background for middle panel in light mode */
+}
+
+.right-panel {
+    flex: 1;
+    background-color: #f0f0f0; /* Light grey for right panel in light mode */
+}
+
+/* Collapsible Styles */
+.collapsible {
+    background-color: #FFA500; /* Orange for collapsible headers */
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.dark-theme .collapsible , .dark-theme .content{
+    background-color: #555;
+}
+
+.collapsible:hover {
+    background-color: #e68900;
+}
+
+.content {
+    display: none;
+    padding: 0 10px;
+    background-color: #f1f1f1; /* Light grey for content in light mode */
+}
+
+.content a {
+    display: block;
+    padding: 8px;
+    color: black;
+    text-decoration: none;
+}
+
+.content a:hover {
+    background-color: #ddd;
+}
+
+/* Highlighting selected topic */
+a.selected {
+    font-weight: bold;
+    color: #FFA500; /* Orange for selected topic */
+}
