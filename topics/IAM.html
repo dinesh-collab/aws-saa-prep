@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS IAM - Certified Solutions Architect Exam Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+        }
+        h1 {
+            color: #FFA500;
+        }
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 15px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AWS IAM - Certified Solutions Architect Exam Guide</h1>
+    
+    <h2>Key IAM Concepts for the Exam</h2>
+    
+    <h3>IAM Users and Groups</h3>
+    <ul>
+        <li><strong>Users:</strong> Individual identities with specific permissions to access AWS resources.</li>
+        <li><strong>Groups:</strong> Collections of IAM users that share the same permissions. Users inherit the permissions assigned to the group.</li>
+    </ul>
+    
+    <h3>IAM Roles</h3>
+    <p>Roles are used to delegate permissions to trusted entities, such as AWS services, users, or applications. Roles do not have long-term credentials; instead, they are used to assume temporary credentials.</p>
+    
+    <h3>IAM Policies</h3>
+    <ul>
+        <li><strong>Managed Policies:</strong> AWS provides pre-built policies that can be attached to users, groups, or roles.</li>
+        <li><strong>Inline Policies:</strong> Policies that are directly embedded into a user, group, or role.</li>
+        <li><strong>Custom Policies:</strong> JSON-based policies that define granular permissions based on actions, resources, and conditions.</li>
+    </ul>
+    
+    <h3>Security Best Practices</h3>
+    <ul>
+        <li><strong>Least Privilege Principle:</strong> Assign the minimum permissions necessary for users or services to perform their tasks.</li>
+        <li><strong>Multi-Factor Authentication (MFA):</strong> Enforce MFA for root accounts and sensitive operations.</li>
+        <li><strong>Password Policies:</strong> Set password complexity requirements, expiration periods, and enforce the use of strong passwords.</li>
+    </ul>
+    
+    <h3>Cross-Account Access</h3>
+    <p>Use IAM roles to allow users from one AWS account to access resources in another account securely.</p>
+    
+    <h3>Federation and Identity Providers</h3>
+    <ul>
+        <li><strong>Federation:</strong> Integrate with external identity providers (like SAML or OIDC) to grant users from those providers access to AWS resources.</li>
+        <li><strong>Web Identity Federation:</strong> Used for applications like mobile or web apps to authenticate users via social identity providers (e.g., Google, Facebook).</li>
+    </ul>
+    
+    <h3>Service-Linked Roles</h3>
+    <p>Roles that are predefined by AWS services to allow them to perform actions on your behalf. These roles are managed entirely by the service, reducing the complexity of managing permissions.</p>
+    
+    <h3>Resource-Based Policies</h3>
+    <p>Unlike user-based policies, resource-based policies are attached directly to AWS resources like S3 buckets, SNS topics, or SQS queues, defining who can access those resources and what actions they can perform.</p>
+    
+    <h2>Exam Tips</h2>
+    <ul>
+        <li>Understand the <strong>JSON structure</strong> of IAM policies, including elements like <code>Effect</code>, <code>Action</code>, <code>Resource</code>, and <code>Condition</code>.</li>
+        <li>Be familiar with <strong>common use cases</strong> for IAM, such as setting up cross-account roles, creating least-privilege policies, and implementing MFA.</li>
+        <li>Know how to configure <strong>federated access</strong> and how IAM integrates with other AWS services for authentication and authorization.</li>
+        <li>Scenarios on the exam may require you to identify the correct IAM setup for a given use case, so practice interpreting and creating policies.</li>
+    </ul>
+</body>
+</html>
