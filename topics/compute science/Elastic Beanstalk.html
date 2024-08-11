@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Elastic Beanstalk Information</title>
+    <style>
+        /* Default (Light Mode) Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #fff; /* Light background */
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            min-height: 100vh;
+        }
+
+        html {
+            min-height: 100vh;
+        }
+        h1 {
+            color: #f4f4f4;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>AWS Elastic Beanstalk Information</h2>
+
+        <h2>Overview</h2>
+        <p>
+            <strong>AWS Elastic Beanstalk</strong> is a Platform as a Service (PaaS) offering from Amazon Web Services that simplifies the process of deploying, managing, and scaling web applications and services. Elastic Beanstalk allows you to quickly deploy applications written in various programming languages, including Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker, without needing to manage the underlying infrastructure.
+        </p>
+
+        <img src="https://k21academy.com/wp-content/uploads/2020/09/Advantage-of-Elastic-Beanstalk.png" alt="AWS Elastic Beanstalk Architecture Diagram">
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Automatic Scaling:</strong> Elastic Beanstalk automatically scales your application based on the demands of your application. It adjusts the number of Amazon EC2 instances running your application depending on traffic and load.</li>
+            <li><strong>Managed Environment:</strong> Elastic Beanstalk manages the infrastructure and resources that run your applications, including load balancing, scaling, monitoring, and health management.</li>
+            <li><strong>Customization:</strong> You can choose from several environments, such as single-instance, load-balanced, and auto-scaling environments, depending on your application's needs.</li>
+            <li><strong>Built-In Monitoring:</strong> Elastic Beanstalk integrates with Amazon CloudWatch to provide detailed monitoring and alerts for your applications.</li>
+            <li><strong>Application Updates:</strong> Elastic Beanstalk allows you to perform rolling updates and application versioning to update your applications without downtime.</li>
+            <li><strong>Support for Multiple Languages and Platforms:</strong> Elastic Beanstalk supports a wide variety of programming languages and platforms, including Docker, allowing you to deploy containerized applications easily.</li>
+        </ul>
+
+        <h2>How It Works</h2>
+        <p>
+            When you deploy your application to Elastic Beanstalk, it automatically handles the deployment process, including provisioning the necessary resources like EC2 instances, configuring load balancers, and setting up auto-scaling. You can upload your application code directly to the Elastic Beanstalk console, use Git to deploy, or integrate with your CI/CD pipeline.
+        </p>
+        <p>
+            Elastic Beanstalk provides a simple web interface, command-line tools, and APIs that allow you to manage your applications. It also supports environment cloning, which allows you to replicate an existing environment for testing or staging.
+        </p>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Web Applications:</strong> Deploy and scale web applications quickly without managing the underlying infrastructure.</li>
+            <li><strong>Microservices:</strong> Deploy microservices architectures using Docker or other supported platforms with Elastic Beanstalk.</li>
+            <li><strong>API Backends:</strong> Build and deploy API backends with automatic scaling and monitoring.</li>
+            <li><strong>Development and Testing:</strong> Quickly spin up environments for development, testing, or staging purposes.</li>
+        </ul>
+
+        <h2>Exam Tips for AWS Certified Solutions Architect</h2>
+        <ul>
+            <li>Understand the core components of Elastic Beanstalk, including environments, applications, and deployments.</li>
+            <li>Know how Elastic Beanstalk integrates with other AWS services, such as RDS, S3, and IAM.</li>
+            <li>Be familiar with the different deployment strategies supported by Elastic Beanstalk, including rolling updates and blue/green deployments.</li>
+            <li>Understand the pricing model for Elastic Beanstalk, which is based on the resources (like EC2 instances) that your application consumes.</li>
+            <li>Know how to customize and extend Elastic Beanstalk environments using configuration files and environment variables.</li>
+            <li>Be aware of the limitations and best practices for using Elastic Beanstalk in production environments.</li>
+        </ul>
+    </div>
+</body>
+</html>
