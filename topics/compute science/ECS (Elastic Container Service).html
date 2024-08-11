@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS ECS Information</title>
+    <style>
+        /* Default (Light Mode) Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* Light background */
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            min-height: 100vh;
+        }
+
+        html {
+            min-height: 100vh;
+        }
+
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            color: #f4f4f4;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>AWS Elastic Container Service (ECS) Information</h2>
+
+        <h2>Overview</h2>
+        <p>
+            <strong>AWS Elastic Container Service (ECS)</strong> is a fully managed container orchestration service that makes it easy to deploy, manage, and scale containerized applications using Docker containers. ECS is highly scalable, high-performance, and supports Docker containers to run and manage containers on a cluster of Amazon EC2 instances.
+        </p>
+
+        <img src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2022/09/29/Figure-1.-Launchmetrics-backend-architecture-1260x593.png" alt="AWS ECS Architecture Diagram">
+        <img src="https://d1.awsstatic.com/Product-Page-Diagram_Amazon-Elastic-Container-Service%402x%20march%202023.8447640b2f8c4ab0a9b935c7724cd32cfe4e6d33.png" alt="AWS ECS Architecture Diagram">
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Cluster Management:</strong> ECS manages clusters of EC2 instances, providing the infrastructure for running containerized applications.</li>
+            <li><strong>Task Definition:</strong> Define your containers, resources, networking, and IAM roles in a task definition, which is a blueprint for running containers.</li>
+            <li><strong>Service Auto Scaling:</strong> Automatically scale your containerized applications based on demand, maintaining the desired number of tasks.</li>
+            <li><strong>Integration with AWS Services:</strong> ECS integrates with other AWS services such as IAM, CloudWatch, ALB (Application Load Balancer), and ECR (Elastic Container Registry).</li>
+            <li><strong>Fargate Launch Type:</strong> Run containers without managing the underlying EC2 instances, allowing you to focus on application development.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Microservices:</strong> Deploy and manage microservices architectures, allowing independent scaling and deployment of different services.</li>
+            <li><strong>Batch Processing:</strong> Run parallel tasks such as image processing, ETL jobs, and data processing using containers.</li>
+            <li><strong>Hybrid Deployment:</strong> Deploy ECS on-premises using ECS Anywhere, allowing you to run containerized applications in a hybrid environment.</li>
+        </ul>
+
+        <h2>Exam Tips for AWS Certified Solutions Architect</h2>
+        <ul>
+            <li>Understand the differences between ECS and other container services like EKS (Elastic Kubernetes Service).</li>
+            <li>Know the use cases for EC2 launch type vs. Fargate launch type.</li>
+            <li>Be familiar with the integration of ECS with other AWS services like IAM, CloudWatch, and Application Load Balancer.</li>
+            <li>Understand how ECS handles service auto-scaling and load balancing for containerized applications.</li>
+        </ul>
+    </div>
+</body>
+</html>
