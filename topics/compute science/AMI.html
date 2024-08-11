@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS AMI Information - Certified Solutions Architect Exam Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+
+        }
+        h1 {
+            color: #FFA500;
+        }
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 15px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        .diagram {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .diagram img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>AWS AMI Information - Certified Solutions Architect Exam Guide</h1>
+
+    <h2>Overview of Amazon Machine Images (AMIs)</h2>
+    <p>Amazon Machine Images (AMIs) are pre-configured templates used to create and launch Amazon EC2 instances. An AMI includes the operating system, application server, applications, and other configurations required to launch an instance. AMIs can be created from existing EC2 instances or can be obtained from the AWS Marketplace.</p>
+
+    <h2>Key Components of AMIs</h2>
+    <ul>
+        <li><strong>Image:</strong> The base template for the instance.</li>
+        <li><strong>Instance Type:</strong> Determines the resources allocated to the instance (e.g., CPU, memory).</li>
+        <li><strong>Launch Configuration:</strong> Defines how the instance is configured upon launch (e.g., network settings, storage).</li>
+        <li><strong>Snapshot:</strong> The underlying storage that is used by the instance's root volume and additional volumes.</li>
+    </ul>
+
+    <h2>AMI Lifecycle</h2>
+    <p>AMIs have a lifecycle that involves creation, usage, and deregistration. Below is a diagram illustrating the lifecycle of an AMI:</p>
+
+    <div class="diagram">
+        <img src="data:image/png;base64,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 alt="AMI Lifecycle Diagram">
+    </div>
+
+    <h2>Creating and Using AMIs</h2>
+    <p>To create an AMI, you can start from an existing EC2 instance, configure it as needed, and then create an image of that instance. Once created, the AMI can be used to launch new EC2 instances with the same configuration.</p>
+
+    <h3>Steps to Create an AMI</h3>
+    <ol>
+        <li>Launch an EC2 instance and configure it as required.</li>
+        <li>Connect to the instance and install any necessary software or updates.</li>
+        <li>Create an image of the instance from the EC2 Management Console or using the AWS CLI.</li>
+        <li>The AMI can now be used to launch new instances with the same configuration.</li>
+    </ol>
+
+    <h3>Using AMIs</h3>
+    <p>When launching a new EC2 instance, you can select an AMI from your account or from the AWS Marketplace. You can also use custom AMIs that you have created for specific configurations or software stacks.</p>
+</body>
+</html>
