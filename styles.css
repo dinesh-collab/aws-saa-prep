@@ -72,7 +72,15 @@ html {
     background-color: #555;
     color: #fff;
 }
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
 
+h1 {
+    color: #010409;
+}
 .dark-theme .expand-all:hover {
     background-color: #444;
 }
@@ -85,7 +93,7 @@ html {
     background-color: #222; /* Darker grey for middle panel */
 }
 
-.dark-theme a {
+.dark-theme a , .dark-theme h2, .dark-theme h3 , .dark-theme .content a{
     color: #f0f0f0;
 }
 
