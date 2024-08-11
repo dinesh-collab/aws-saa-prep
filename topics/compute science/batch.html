@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Batch Information</title>
+    <style>
+        /* Default (Light Mode) Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* Light background */
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            min-height: 100vh;
+        }
+
+        html {
+            min-height: 100vh;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #f4f4f4;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>AWS Batch Information</h2>
+
+        <h2>Overview</h2>
+        <p>
+            <strong>AWS Batch</strong> is a fully managed service that enables developers, scientists, and engineers to easily and efficiently run hundreds of thousands of batch computing jobs. AWS Batch dynamically provisions the optimal quantity and type of compute resources (e.g., CPU or memory-optimized instances) based on the volume and specific resource requirements of the batch jobs submitted.
+        </p>
+
+        <img src="https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2019/12/17/Picture1.png" alt="AWS Batch Architecture Diagram">
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Job Scheduling:</strong> AWS Batch manages the execution of your jobs and allows you to define dependencies between jobs, such as "this job can only run after this one finishes."</li>
+            <li><strong>Resource Management:</strong> AWS Batch automatically provisions the compute resources required, based on the needs of the job, without requiring manual intervention.</li>
+            <li><strong>Scalability:</strong> It automatically scales up compute resources when demand increases and scales down when jobs complete.</li>
+            <li><strong>Custom Compute Environments:</strong> You can configure environments with different instance types, custom AMIs, and VPC settings.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Data Processing:</strong> Batch processing of large volumes of data, like extracting, transforming, and loading (ETL) tasks.</li>
+            <li><strong>Rendering:</strong> Parallel processing for rendering high-resolution images and videos.</li>
+            <li><strong>Machine Learning:</strong> Running multiple training jobs on a large dataset using different parameters.</li>
+        </ul>
+    </div>
+</body>
+</html>
