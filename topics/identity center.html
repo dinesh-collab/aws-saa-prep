@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Identity Center - Certified Solutions Architect Exam Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+        }
+        h1 {
+            color: #FFA500;
+        }
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 15px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AWS Identity Center - Certified Solutions Architect Exam Guide</h1>
+
+    <h2>Overview of AWS Identity Center</h2>
+    <p>AWS Identity Center (formerly known as AWS Single Sign-On) is a service that allows you to centrally manage access to multiple AWS accounts and business applications using a single sign-on (SSO) experience. It simplifies the process of managing identities, permissions, and access control across an organization.</p>
+    
+    <h2>Key Concepts for the Exam</h2>
+
+    <h3>Centralized Access Management</h3>
+    <p>AWS Identity Center provides centralized management of access to AWS accounts and applications by integrating with identity sources like AWS IAM Identity Center, Active Directory, or external identity providers.</p>
+    <ul>
+        <li><strong>SSO Experience:</strong> Users can log in once and gain access to all assigned AWS accounts and applications without needing to sign in multiple times.</li>
+        <li><strong>Identity Providers:</strong> AWS Identity Center supports integration with external identity providers (IdPs) using SAML 2.0, allowing organizations to use existing credentials.</li>
+    </ul>
+
+    <h3>Permission Management</h3>
+    <p>AWS Identity Center simplifies permission management by allowing administrators to create and assign permission sets that define the AWS service-level permissions users have.</p>
+    <ul>
+        <li><strong>Permission Sets:</strong> Reusable configurations that define a set of permissions users can inherit when accessing AWS accounts.</li>
+        <li><strong>Role-Based Access:</strong> Assign roles to users or groups to manage permissions effectively across the organization.</li>
+    </ul>
+
+    <h3>Integration with AWS Organizations</h3>
+    <p>AWS Identity Center integrates with AWS Organizations, allowing you to manage user access across all AWS accounts in the organization.</p>
+    <ul>
+        <li><strong>Account Grouping:</strong> Group accounts within AWS Organizations and assign access based on organizational structure.</li>
+        <li><strong>Cross-Account Access:</strong> Use permission sets to grant users cross-account access within the organization, reducing the complexity of managing individual account access.</li>
+    </ul>
+
+    <h3>Security and Compliance</h3>
+    <p>AWS Identity Center helps ensure that access to AWS resources is secure and compliant with organizational policies.</p>
+    <ul>
+        <li><strong>Multi-Factor Authentication (MFA):</strong> Enforce MFA for additional security when users sign in to AWS resources.</li>
+        <li><strong>Audit and Monitoring:</strong> Monitor user activity and generate audit logs to ensure compliance with security policies.</li>
+    </ul>
+
+    <h2>Common Exam Scenarios</h2>
+    <ul>
+        <li>Designing a centralized access management solution using AWS Identity Center for multiple AWS accounts.</li>
+        <li>Implementing SSO for AWS accounts and third-party applications using AWS Identity Center.</li>
+        <li>Creating and managing permission sets to enforce role-based access control across AWS accounts.</li>
+        <li>Integrating AWS Identity Center with AWS Organizations to manage access across multiple accounts.</li>
+    </ul>
+
+    <h2>Exam Tips</h2>
+    <ul>
+        <li>Understand how AWS Identity Center integrates with identity providers and AWS Organizations.</li>
+        <li>Be familiar with creating and managing permission sets to enforce access control.</li>
+        <li>Know how to implement SSO for AWS accounts and external applications using AWS Identity Center.</li>
+        <li>Practice designing access management solutions that leverage AWS Identity Center for centralized control.</li>
+    </ul>
+</body>
+</html>
