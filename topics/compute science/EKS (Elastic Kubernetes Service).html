@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS EKS Information</title>
+    <style>
+        /* Default (Light Mode) Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* Light background */
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            min-height: 100vh;
+        }
+
+        html {
+            min-height: 100vh;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #f4f4f4;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>AWS Elastic Kubernetes Service (EKS) Information</h2>
+
+        <h2>Overview</h2>
+        <p>
+            <strong>AWS Elastic Kubernetes Service (EKS)</strong> is a managed service that simplifies running Kubernetes on AWS without needing to install and operate your own Kubernetes control plane or nodes. EKS is highly available, scalable, and secure, and it runs the open-source Kubernetes software, so you can use all the existing features and plugins from the Kubernetes community.
+        </p>
+
+        <img src="https://docs.aws.amazon.com/images/architecture-diagrams/latest/modernize-applications-with-microservices-using-amazon-eks/images/modernize-applications-with-microservices-using-amazon-eks.png" alt="AWS EKS Architecture Diagram">
+        <img src=" https://www.devopsschool.com/blog/wp-content/uploads/2021/03/Amazon-Elastic-Kubernetes-Service-EKS-Explained-Diagram-1.png" alt="AWS EKS Architecture Diagram">
+       
+       
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Fully Managed Kubernetes:</strong> EKS automatically manages the availability and scalability of the Kubernetes control plane.</li>
+            <li><strong>Integration with AWS Services:</strong> EKS integrates seamlessly with AWS services like IAM, CloudWatch, and ALB, providing a secure and scalable environment for running Kubernetes workloads.</li>
+            <li><strong>High Availability:</strong> The EKS control plane runs across multiple Availability Zones to ensure high availability and automatically replaces unhealthy instances.</li>
+            <li><strong>Support for EKS Anywhere:</strong> Run Kubernetes on-premises with EKS Anywhere, providing a consistent Kubernetes experience on your infrastructure.</li>
+            <li><strong>Fargate for EKS:</strong> Run Kubernetes pods without managing servers, using AWS Fargate, which provides serverless compute for Kubernetes applications.</li>
+            <li><strong>Amazon EKS Add-ons:</strong> Easily install and manage common operational software for EKS clusters, such as networking, storage, and observability components.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Microservices Architecture:</strong> Deploy and manage microservices-based applications with Kubernetes, allowing each service to scale independently.</li>
+            <li><strong>Hybrid and Multi-Cloud Deployments:</strong> Use EKS to run Kubernetes workloads across on-premises environments and multiple cloud providers.</li>
+            <li><strong>Data Processing and Machine Learning:</strong> Run distributed data processing or machine learning workloads that benefit from Kubernetes' scheduling and scaling capabilities.</li>
+        </ul>
+
+        <h2>Exam Tips for AWS Certified Solutions Architect</h2>
+        <ul>
+            <li>Understand the differences between EKS, ECS, and other container services on AWS.</li>
+            <li>Know how to set up and configure an EKS cluster, including networking, IAM roles, and security groups.</li>
+            <li>Be familiar with how EKS integrates with other AWS services, such as IAM, CloudWatch, and Application Load Balancer.</li>
+            <li>Understand the use cases for Fargate in EKS, and when to use Fargate vs. self-managed nodes.</li>
+            <li>Understand the concepts of Kubernetes, including pods, services, namespaces, and deployments, as they apply to EKS.</li>
+            <li>Know how to secure your EKS clusters using IAM roles, security groups, and Kubernetes RBAC (Role-Based Access Control).</li>
+        </ul>
+    </div>
+</body>
+</html>
