@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS App Runner Information - Certified Solutions Architect Exam Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+        }
+        h1 {
+            color: #FFA500;
+        }
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 15px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        .diagram {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .diagram img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>AWS App Runner Information - Certified Solutions Architect Exam Guide</h1>
+
+    <h2>Overview of AWS App Runner</h2>
+    <p>AWS App Runner is a fully managed service that makes it easy for developers to quickly deploy containerized applications from source code or container images. It abstracts away the infrastructure management tasks, such as scaling, load balancing, and monitoring, allowing developers to focus on building their applications.</p>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li><strong>Simplified Deployment:</strong> Deploy applications from source code or container images without managing servers or infrastructure.</li>
+        <li><strong>Automatic Scaling:</strong> Automatically scales the application up or down based on traffic.</li>
+        <li><strong>Integrated Monitoring:</strong> Provides built-in monitoring and logging with AWS CloudWatch.</li>
+        <li><strong>Managed Load Balancing:</strong> Automatically balances the load between instances to ensure high availability.</li>
+    </ul>
+
+    <h2>Architecture and Workflow</h2>
+    <p>Below is a diagram illustrating the architecture and workflow of AWS App Runner:</p>
+
+    <div class="diagram">
+        <img src="https://d1.awsstatic.com/serverless/AppRunner/app_runner_overview.5ecab2d7c2a94774b01b369a848a6d17.png" alt="AWS App Runner Architecture Diagram">
+    </div>
+
+    <h2>How AWS App Runner Works</h2>
+    <p>1. **Source Code or Container Image**: You provide your application source code or a container image.</p>
+    <p>2. **Build and Deployment**: App Runner handles the build and deployment of the application. If you use source code, App Runner builds the container image automatically. If you use a container image, App Runner deploys it directly.</p>
+    <p>3. **Automatic Scaling**: App Runner automatically scales the application based on incoming traffic.</p>
+    <p>4. **Monitoring and Logging**: App Runner integrates with AWS CloudWatch for monitoring and logging.</p>
+
+    <h2>Getting Started with AWS App Runner</h2>
+    <p>To get started with AWS App Runner:</p>
+    <ol>
+        <li>Sign in to the AWS Management Console.</li>
+        <li>Navigate to the App Runner service.</li>
+        <li>Choose to create a new service, and specify the source (source code repository or container image).</li>
+        <li>Configure the service settings, such as environment variables and scaling options.</li>
+        <li>Deploy the application and monitor its performance using the built-in tools.</li>
+    </ol>
+</body>
+</html>
