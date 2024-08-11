@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS EC2 - Certified Solutions Architect Exam Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+        }
+        h1 {
+            color: #FFA500;
+        }
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 15px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        .diagram {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .diagram img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>AWS EC2 - Certified Solutions Architect Exam Guide</h1>
+
+    <h2>Overview of AWS EC2</h2>
+    <p>Amazon Elastic Compute Cloud (EC2) is a core AWS service that provides scalable computing capacity in the cloud. It allows users to launch and manage virtual servers, known as instances, in the AWS cloud. EC2 offers flexibility in choosing the right instance type for your workload, including the ability to scale up or down based on demand.</p>
+
+    <h2>Key Concepts for the Exam</h2>
+
+    <h3>EC2 Instance Types</h3>
+    <p>EC2 instances come in various types and families designed for different use cases:</p>
+    <ul>
+        <li><strong>General Purpose:</strong> Balanced compute, memory, and networking resources. Examples: <code>t3</code>, <code>m5</code>.</li>
+        <li><strong>Compute Optimized:</strong> Ideal for compute-intensive applications. Examples: <code>c5</code>, <code>c6g</code>.</li>
+        <li><strong>Memory Optimized:</strong> For applications requiring large amounts of memory. Examples: <code>r5</code>, <code>x1e</code>.</li>
+        <li><strong>Storage Optimized:</strong> Optimized for high, sequential read and write access to very large data sets. Examples: <code>i3</code>, <code>d2</code>.</li>
+        <li><strong>Accelerated Computing:</strong> Provides hardware accelerators for specific workloads. Examples: <code>p3</code>, <code>g4ad</code>.</li>
+    </ul>
+
+    <h3>Key Features</h3>
+    <p>AWS EC2 offers several key features that are essential for managing cloud computing resources:</p>
+    <ul>
+        <li><strong>Scalability:</strong> Easily scale your EC2 instances up or down based on demand using features like Auto Scaling.</li>
+        <li><strong>Elastic Load Balancing:</strong> Distribute incoming traffic across multiple EC2 instances to ensure high availability.</li>
+        <li><strong>Instance Store and EBS:</strong> Choose between instance store (temporary storage) or Amazon Elastic Block Store (persistent storage) for your data.</li>
+        <li><strong>Amazon Machine Images (AMIs):</strong> Use AMIs to create instances with predefined configurations, including OS, applications, and settings.</li>
+        <li><strong>Security:</strong> Use security groups and network ACLs to control inbound and outbound traffic to your EC2 instances. Integrate with AWS Identity and Access Management (IAM) for fine-grained access control.</li>
+    </ul>
+
+    <h3>Instance Lifecycle</h3>
+    <p>The lifecycle of an EC2 instance includes several stages:</p>
+    <div class="diagram">
+        <h4>EC2 Instance Lifecycle Diagram</h4>
+        <img src="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/EC2-Lifecycle.png" alt="EC2 Instance Lifecycle Diagram">
+        <p>Diagram showing the lifecycle stages of an EC2 instance.</p>
+    </div>
+    <ul>
+        <li><strong>Launch:</strong> Start an instance using an AMI and select the appropriate instance type and configuration.</li>
+        <li><strong>Running:</strong> The instance is active and can be accessed and managed.</li>
+        <li><strong>Stopped:</strong> The instance is stopped but can be restarted at any time. Billing is stopped when an instance is stopped, but data on EBS volumes persists.</li>
+        <li><strong>Terminated:</strong> The instance is permanently deleted. All data on instance store volumes is lost. EBS volumes can be retained if specified.</li>
+    </ul>
+
+    <h3>Pricing</h3>
+    <p>AWS EC2 pricing is based on several factors:</p>
+    <ul>
+        <li><strong>Instance Type:</strong> Different instance types have different pricing.</li>
+        <li><strong>On-Demand Instances:</strong> Pay for compute capacity by the hour or second with no long-term commitments.</li>
+        <li><strong>Reserved Instances:</strong> Purchase instances for a one- or three-year term at a significant discount compared to on-demand pricing.</li>
+        <li><strong>Spot Instances:</strong> Bid for unused capacity at reduced rates, with the possibility of interruption.</li>
+        <li><strong>Savings Plans:</strong> Flexible pricing model offering lower rates on EC2 usage in exchange for a commitment to a consistent amount of usage over a 1- or 3-year term.</li>
+    </ul>
+
+    <h3>Security and Networking</h3>
+    <p>Security and networking configurations are crucial for managing EC2 instances:</p>
+    <ul>
+        <li><strong>Security Groups:</strong> Act as virtual firewalls to control inbound and outbound traffic to your instances.</li>
+        <li><strong>Network ACLs:</strong> Provide an additional layer of security at the subnet level.</li>
+        <li><strong>Key Pairs:</strong> Used for securely connecting to your instances via SSH (for Linux) or RDP (for Windows).</li>
+        <li><strong>Elastic IPs:</strong> Static IP addresses that can be associated with EC2 instances for maintaining a consistent IP address.</li>
+    </ul>
+
+    <h2>Exam Tips</h2>
+    <ul>
+        <li>Understand the various instance types and their use cases.</li>
+        <li>Be familiar with the EC2 instance lifecycle and pricing models.</li>
+        <li>Know how to configure security groups and network settings for your instances.</li>
+        <li>Practice using AWS EC2 for different scenarios, including launching, managing, and terminating instances.</li>
+    </ul>
+</body>
+</html>
