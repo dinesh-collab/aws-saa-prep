@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS CLI - Certified Solutions Architect Exam Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+        }
+        h1 {
+            color: #FFA500;
+        }
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 15px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AWS CLI - Certified Solutions Architect Exam Guide</h1>
+
+    <h2>Overview of AWS CLI</h2>
+    <p>The AWS Command Line Interface (CLI) is a unified tool that provides a consistent interface for interacting with AWS services from the command line. It allows developers and system administrators to manage their AWS resources and automate workflows using simple commands.</p>
+
+    <h2>Key Concepts for the Exam</h2>
+
+    <h3>Installation and Configuration</h3>
+    <p>Before using AWS CLI, you need to install and configure it on your local machine or within an AWS environment.</p>
+    <ul>
+        <li><strong>Installation:</strong> AWS CLI can be installed on various operating systems, including Windows, macOS, and Linux.</li>
+        <li><strong>Configuration:</strong> Use the `aws configure` command to set up your credentials, region, and output format. These settings are stored in the `~/.aws` directory.</li>
+    </ul>
+
+    <h3>Basic Commands</h3>
+    <p>AWS CLI allows you to perform a wide range of operations across different AWS services.</p>
+    <ul>
+        <li><strong>Listing Resources:</strong> Use commands like `aws ec2 describe-instances` or `aws s3 ls` to list your resources.</li>
+        <li><strong>Creating Resources:</strong> Create resources using commands like `aws ec2 run-instances` or `aws s3 mb s3://your-bucket-name`.</li>
+        <li><strong>Managing Resources:</strong> Start, stop, or terminate instances using commands like `aws ec2 start-instances`, `aws ec2 stop-instances`, or `aws ec2 terminate-instances`.</li>
+    </ul>
+
+    <h3>Scripting and Automation</h3>
+    <p>AWS CLI is a powerful tool for scripting and automating AWS tasks.</p>
+    <ul>
+        <li><strong>Bash Scripts:</strong> Incorporate AWS CLI commands into shell scripts to automate common tasks, such as backups, deployments, or resource management.</li>
+        <li><strong>JSON Output:</strong> Use JSON output to parse command responses and integrate them with other scripts or tools.</li>
+    </ul>
+
+    <h3>Advanced Features</h3>
+    <p>For advanced use cases, AWS CLI provides features like profiles, pagination, and parameter files.</p>
+    <ul>
+        <li><strong>Profiles:</strong> Use named profiles to manage multiple sets of credentials and settings. Switch between profiles using the `--profile` flag.</li>
+        <li><strong>Pagination:</strong> Handle large data sets with the built-in pagination, ensuring that all results are retrieved even if they span multiple pages.</li>
+        <li><strong>Parameter Files:</strong> Pass large or complex parameters using JSON or YAML parameter files to streamline CLI commands.</li>
+    </ul>
+
+    <h2>Common Exam Scenarios</h2>
+    <ul>
+        <li>Setting up and configuring AWS CLI on a new environment.</li>
+        <li>Automating infrastructure deployments using AWS CLI scripts.</li>
+        <li>Managing and querying AWS resources using CLI commands.</li>
+        <li>Switching between different AWS accounts using named profiles in AWS CLI.</li>
+    </ul>
+
+    <h2>Exam Tips</h2>
+    <ul>
+        <li>Ensure you are familiar with the basic and advanced features of AWS CLI.</li>
+        <li>Practice using AWS CLI to manage and automate AWS resources.</li>
+        <li>Understand how to configure AWS CLI for different environments and use cases.</li>
+        <li>Know how to handle large data sets with pagination and use parameter files for complex configurations.</li>
+    </ul>
+</body>
+</html>
