@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Kendra - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Kendra</h1>
+        <p>AWS Kendra is an intelligent search service powered by machine learning. It allows organizations to index and search across a variety of data sources to provide accurate and contextually relevant search results for users.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Natural Language Understanding:</strong> AWS Kendra uses advanced natural language processing (NLP) to understand the context of search queries and provide relevant results.</li>
+            <li><strong>Connectors to Data Sources:</strong> Kendra supports a variety of data sources, including file systems, databases, applications, and more, to ensure comprehensive search capabilities.</li>
+            <li><strong>Domain-Specific Models:</strong> Kendra offers pre-trained models tailored to specific domains, such as IT, finance, healthcare, and legal, to improve search accuracy.</li>
+            <li><strong>Document Ranking:</strong> Kendra ranks documents based on relevance and context, ensuring that users receive the most pertinent information first.</li>
+            <li><strong>Faceted Search:</strong> Users can refine search results using facets such as date, author, or document type, making it easier to find the right information.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <img src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2024/03/18/fig2-search-bot-1260x559.png" alt="AWS Kendra Architecture Diagram">
+        <ul>
+            <li><strong>Data Indexing:</strong> AWS Kendra indexes data from various sources, applying NLP to understand and categorize the content.</li>
+            <li><strong>Query Processing:</strong> When a user submits a search query, Kendra processes the query using its NLP models to understand the intent.</li>
+            <li><strong>Result Ranking:</strong> Kendra ranks the search results based on relevance, presenting the most contextually appropriate information to the user.</li>
+            <li><strong>Faceted Search:</strong> Users can filter and refine the search results using facets, improving their ability to find specific information.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Enterprise Search:</strong> Enable employees to search across organizational data sources such as file systems, intranets, and databases for relevant information.</li>
+            <li><strong>Customer Support:</strong> Improve customer support experiences by allowing agents to quickly find relevant documentation and resources.</li>
+            <li><strong>Compliance and Legal:</strong> Search and retrieve legal documents, contracts, and compliance records efficiently.</li>
+            <li><strong>Healthcare Information Retrieval:</strong> Help healthcare professionals quickly access medical records, research papers, and other critical information.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Kendra integrates with various AWS services to enhance its capabilities:</p>
+        <ul>
+            <li><strong>Amazon S3:</strong> Store and index documents in Amazon S3 for searchable access via Kendra.</li>
+            <li><strong>AWS Lambda:</strong> Automate the process of data indexing and query handling with AWS Lambda functions.</li>
+            <li><strong>Amazon CloudWatch:</strong> Monitor Kendra's performance and usage metrics using Amazon CloudWatch.</li>
+            <li><strong>Amazon QuickSight:</strong> Visualize search query analytics in Amazon QuickSight for better insights into user behavior.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li>AWS Kendra is an intelligent search service that uses NLP to understand and process search queries.</li>
+            <li>Kendra supports multiple data sources, including S3, databases, and applications, for comprehensive search capabilities.</li>
+            <li>It provides domain-specific models and faceted search to improve the accuracy and relevance of search results.</li>
+            <li>Understand the common use cases for Kendra, such as enterprise search, customer support, and legal document retrieval.</li>
+            <li>Integration with other AWS services like S3, Lambda, and CloudWatch enhances Kendra's functionality.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
