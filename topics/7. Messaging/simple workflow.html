@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Simple Workflow Service (SWF) - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Simple Workflow Service (SWF)</h1>
+        <p>AWS Simple Workflow Service (SWF) is a fully managed service that enables you to build and run background tasks in the cloud. It helps developers manage distributed applications and orchestrate tasks across multiple services, ensuring that they are executed reliably and efficiently.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Workflow Orchestration:</strong> Coordinate and manage multiple tasks and services as part of a single workflow.</li>
+            <li><strong>Task Scheduling:</strong> Schedule and execute tasks with retry policies and timeouts.</li>
+            <li><strong>Visibility and Monitoring:</strong> Track the progress of workflows and tasks through detailed visibility and monitoring tools.</li>
+            <li><strong>State Management:</strong> Maintain the state of your workflows across distributed services, ensuring consistency and reliability.</li>
+            <li><strong>Integration with AWS Services:</strong> Seamlessly integrate with other AWS services like Amazon S3, Amazon EC2, and Amazon DynamoDB.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates the architecture of AWS SWF and its components:</p>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220302223230/HowamazonSWFworks.png" alt="AWS SWF Architecture Diagram">
+        <ul>
+            <li><strong>Workflow Execution:</strong> Initiates and manages the execution of workflows.</li>
+            <li><strong>Activity Tasks:</strong> Perform the actual work defined in the workflow.</li>
+            <li><strong>Decision Tasks:</strong> Make decisions and schedule activities based on the workflow logic.</li>
+            <li><strong>Workflow State:</strong> Keeps track of the workflow state, including task progress and results.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Long-Running Workflows:</strong> Handle tasks that require long execution times, such as processing large batches of data or running complex calculations.</li>
+            <li><strong>Task Orchestration:</strong> Coordinate tasks across multiple services, ensuring that they are executed in the correct order and with the appropriate retry policies.</li>
+            <li><strong>Distributed Application Management:</strong> Manage the lifecycle and state of distributed applications, including handling failures and retries.</li>
+            <li><strong>Business Process Automation:</strong> Automate and manage business processes, including approvals, notifications, and data processing.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS SWF integrates with several AWS services to provide a comprehensive workflow management solution:</p>
+        <ul>
+            <li><strong>Amazon S3:</strong> Store and retrieve data used in workflow tasks.</li>
+            <li><strong>Amazon EC2:</strong> Perform computational tasks as part of a workflow.</li>
+            <li><strong>Amazon DynamoDB:</strong> Store and manage state information and results from workflow tasks.</li>
+            <li><strong>AWS Lambda:</strong> Run lightweight, serverless functions as part of a workflow.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Understand Workflow States:</strong> Know how AWS SWF manages workflow states and transitions between states.</li>
+            <li><strong>Task Management:</strong> Be familiar with how tasks are scheduled, executed, and retried.</li>
+            <li><strong>Integration Points:</strong> Understand how AWS SWF integrates with other AWS services and how to use these integrations effectively.</li>
+            <li><strong>Monitoring and Visibility:</strong> Be aware of the tools and metrics available for monitoring workflows and tasks.</li>
+            <li><strong>Use Cases:</strong> Be able to identify and describe common use cases for AWS SWF, including long-running workflows and task orchestration.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
