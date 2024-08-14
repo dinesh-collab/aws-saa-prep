@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Simple Queue Service (SQS) - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Simple Queue Service (SQS)</h1>
+        <p>AWS Simple Queue Service (SQS) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications. It allows you to queue and process messages asynchronously, improving the reliability and scalability of your applications.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Decoupling:</strong> SQS helps in decoupling the components of your application to improve scalability and fault tolerance.</li>
+            <li><strong>Message Persistence:</strong> Messages are stored in queues until they are processed and deleted, ensuring reliable message delivery.</li>
+            <li><strong>Scalability:</strong> SQS automatically scales to handle large volumes of messages without requiring manual intervention.</li>
+            <li><strong>Visibility Timeout:</strong> Provides the ability to prevent multiple consumers from processing the same message by using visibility timeouts.</li>
+            <li><strong>Dead-Letter Queues:</strong> Allows you to handle failed message processing by routing messages that cannot be processed successfully to a dead-letter queue.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates the architecture of AWS SQS and how it facilitates message queuing and processing:</p>
+        <img src="https://miro.medium.com/v2/resize:fit:1400/0*75-_j0vftIVumeIq.png" alt="AWS SQS Architecture Diagram">
+       
+        <img src="https://i.ytimg.com/vi/es4Bu6H7_zE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBsD5avkAADbMkuxgfJYFo_a5Dmsg" alt="AWS SQS Architecture Diagram">
+        <ul>
+            <li><strong>Producer:</strong> Sends messages to an SQS queue.</li>
+            <li><strong>SQS Queue:</strong> Stores messages until they are retrieved by consumers.</li>
+            <li><strong>Consumer:</strong> Retrieves and processes messages from the queue.</li>
+            <li><strong>Visibility Timeout:</strong> Prevents other consumers from processing a message while it is being handled by one consumer.</li>
+            <li><strong>Dead-Letter Queue:</strong> Stores messages that failed processing after multiple attempts for further analysis and debugging.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Decoupling Microservices:</strong> SQS can be used to decouple microservices, allowing each service to operate independently and handle their own workloads.</li>
+            <li><strong>Distributed Systems:</strong> Implement asynchronous processing in distributed systems to handle tasks that do not need immediate responses.</li>
+            <li><strong>Serverless Architectures:</strong> Integrate SQS with AWS Lambda to process messages in a serverless environment.</li>
+            <li><strong>Message Buffering:</strong> Use SQS to buffer requests between different components of your application to ensure smooth processing and reduce latency.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS SQS integrates with various AWS services to provide a comprehensive messaging solution:</p>
+        <ul>
+            <li><strong>AWS Lambda:</strong> Automatically trigger Lambda functions to process messages from SQS queues.</li>
+            <li><strong>Amazon SNS:</strong> Use SNS to send messages to SQS queues as part of a pub/sub messaging model.</li>
+            <li><strong>AWS CloudWatch:</strong> Monitor SQS metrics and set up alarms for message processing and queue performance.</li>
+            <li><strong>AWS Step Functions:</strong> Coordinate and manage the workflow of multiple SQS messages and other AWS services.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Understand Message Queuing:</strong> Know the fundamentals of message queuing, including how messages are sent, stored, and processed in SQS.</li>
+            <li><strong>Different Queue Types:</strong> Be familiar with the differences between Standard and FIFO queues, including their use cases and limitations.</li>
+            <li><strong>Visibility Timeout:</strong> Understand how visibility timeouts work and how they prevent message duplication.</li>
+            <li><strong>Dead-Letter Queues:</strong> Know how to configure and use dead-letter queues to handle failed message processing.</li>
+            <li><strong>Integration Scenarios:</strong> Be aware of how SQS integrates with other AWS services such as Lambda, SNS, and CloudWatch for building robust applications.</li>
+            <li><strong>Scaling and Performance:</strong> Understand SQS’s scaling capabilities and how to monitor and manage queue performance using AWS CloudWatch.</li>
+            <li><strong>Security:</strong> Know about security features such as encryption at rest and in transit, as well as access controls for SQS.</li>
+            <li><strong>Cost Management:</strong> Be aware of how SQS billing works, including costs associated with message operations and data transfer.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
