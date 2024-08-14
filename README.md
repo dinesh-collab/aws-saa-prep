@@ -1,18 +1,19 @@
-# Notes Website
+#  AWS Certified Solutions Architect – Associate (SAA-C03) Exam Notes<
 
-This is a simple notes app created using HTML, CSS, and JavaScript. It allows users to add notes and displays them on the page.
+Key Topics covered
 
 ## Features
 
-- Add notes
-- Responsive design
+Domains Covered
+
+1. Design Resilient Architectures (30%
+2. Define Performant Architectures (28%)
+3. Specify Secure Applications and Architectures (24%)
+4. Design Cost-Optimized Architectures (18%)
+
 
 ## How to Use
 
 1. Open the app [here](https://dinesh-collab.github.io/aws-saa-prep/).
-2. Type your note in the input field and click the "Add Note" button.
-3. Your note will be added to the list below.
 
-## License
 
-This project is licensed under the MIT License.
