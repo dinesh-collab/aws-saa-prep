@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Amazon Managed Streaming - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Amazon Managed Streaming</h1>
+        <p>AWS provides managed streaming services to facilitate real-time data processing and analytics. These services handle the complexities of scaling, availability, and maintenance, allowing you to focus on deriving insights from streaming data.</p>
+
+        <h2>Key Services</h2>
+        <ul>
+            <li><strong>Amazon MSK (Managed Streaming for Apache Kafka):</strong> A fully managed service that makes it easy to build and run applications that use Apache Kafka to process streaming data. Amazon MSK handles the operational aspects of running Kafka clusters, including monitoring, patching, and scaling.</li>
+            <li><strong>Amazon Kinesis:</strong> A set of services for real-time data streaming and processing. Key components include:
+                <ul>
+                    <li><strong>Amazon Kinesis Data Streams:</strong> Allows you to continuously collect and process large streams of data records in real-time.</li>
+                    <li><strong>Amazon Kinesis Data Firehose:</strong> A fully managed service for loading streaming data into AWS data stores such as Amazon S3, Amazon Redshift, and Amazon Elasticsearch Service.</li>
+                    <li><strong>Amazon Kinesis Data Analytics:</strong> Provides real-time analytics on streaming data using standard SQL queries.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates the architecture of AWS Amazon Managed Streaming services:</p>
+        <img src="https://docs.aws.amazon.com/images/whitepapers/latest/build-modern-data-streaming-analytics-architectures/images/serverless-data-pipeline.png" alt="AWS Amazon Managed Streaming Architecture Diagram">
+        <ul>
+            <li><strong>Data Producers:</strong> Applications or devices that generate streaming data.</li>
+            <li><strong>Data Stream:</strong> Managed streaming services like Amazon Kinesis Data Streams or Apache Kafka streams data from producers.</li>
+            <li><strong>Data Processing:</strong> Real-time processing with Amazon Kinesis Data Analytics or custom applications consuming data from the stream.</li>
+            <li><strong>Data Storage:</strong> Use Amazon Kinesis Data Firehose to load processed data into storage solutions like S3 or Redshift for further analysis.</li>
+            <li><strong>Data Analysis:</strong> Analyze and visualize data using AWS services like Amazon QuickSight or Amazon Athena.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Real-time Analytics:</strong> Analyze data as it is generated, such as tracking user activity on a website or monitoring financial transactions.</li>
+            <li><strong>Log and Event Data Processing:</strong> Collect and process logs and events from applications to detect anomalies or generate alerts.</li>
+            <li><strong>Data Integration:</strong> Stream data from multiple sources into data lakes or data warehouses for unified analysis and reporting.</li>
+            <li><strong>IoT Data Processing:</strong> Handle high-throughput data from IoT devices for real-time analytics and monitoring.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Managed Streaming services integrate with various AWS services to provide a comprehensive data processing solution:</p>
+        <ul>
+            <li><strong>AWS Lambda:</strong> Trigger Lambda functions to process streaming data in real-time.</li>
+            <li><strong>AWS Glue:</strong> Use Glue for ETL (Extract, Transform, Load) operations on data ingested through Kinesis Data Firehose.</li>
+            <li><strong>Amazon S3:</strong> Store streaming data or processed results in S3 for long-term storage and further analysis.</li>
+            <li><strong>Amazon Redshift:</strong> Load streaming data into Redshift for analytics and reporting.</li>
+            <li><strong>Amazon QuickSight:</strong> Visualize and analyze data stored in data lakes or data warehouses.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li>Amazon MSK is a managed service for Apache Kafka that simplifies the deployment and operation of Kafka clusters.</li>
+            <li>Amazon Kinesis provides real-time data streaming and processing with various components like Data Streams, Data Firehose, and Data Analytics.</li>
+            <li>Understand the use cases for each Kinesis component and how they integrate with other AWS services.</li>
+            <li>Know how to architect solutions that use managed streaming services for real-time data processing and analytics.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
