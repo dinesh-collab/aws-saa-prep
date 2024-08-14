@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cost Allocation Tags - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Cost Allocation Tags</h1>
+        <p>AWS Cost Allocation Tags help you track and manage costs in AWS by assigning custom labels to AWS resources. These tags are used to categorize and allocate AWS costs to specific projects, departments, or cost centers.</p>
+
+        <h2>Key Concepts</h2>
+        <ul>
+            <li><strong>Cost Allocation Tags:</strong> Key-value pairs assigned to AWS resources for tracking costs.</li>
+            <li><strong>Types of Tags:</strong> User-Defined Tags (created by you) and AWS-Generated Tags (automatically created by AWS).</li>
+            <li><strong>Cost Allocation Reports:</strong> Reports that use these tags to show how costs are distributed across different tags.</li>
+        </ul>
+
+        <h2>Usage Examples</h2>
+        <ul>
+            <li><strong>Tracking Costs by Project:</strong> Assign tags like "Project: Website" to track costs for specific projects.</li>
+            <li><strong>Departmental Cost Tracking:</strong> Use tags like "Department: Marketing" to allocate costs to departments.</li>
+            <li><strong>Resource Management:</strong> Manage costs for specific AWS resources by applying relevant tags.</li>
+        </ul>
+
+        <h2>Diagrams</h2>
+        <p>The diagram below illustrates how AWS Cost Allocation Tags work:</p>
+        <img src="https://docs.aws.amazon.com/images/awsaccountbilling/latest/aboutv2/images/Tag_Example.png" alt="AWS Cost Allocation Tags Diagram">
+        <p>Diagram showing the relationship between resources and cost allocation tags.</p>
+
+        <h2>Integration with Other AWS Services</h2>
+        <ul>
+            <li><strong>AWS Cost Explorer:</strong> View cost allocation alongside your cost and usage data.</li>
+            <li><strong>AWS Budgets:</strong> Set budgets and track costs using tags for more effective financial management.</li>
+            <li><strong>AWS Organizations:</strong> Use tags to manage costs across multiple AWS accounts.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
