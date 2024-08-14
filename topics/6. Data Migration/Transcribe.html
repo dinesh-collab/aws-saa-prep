@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Transcribe - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Transcribe</h1>
+        <p>AWS Transcribe is an automatic speech recognition (ASR) service that makes it easy to add speech-to-text capabilities to your applications. It converts audio and video files into accurate text transcriptions, enabling easier content indexing, search, and analysis.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Speech-to-Text Conversion:</strong> Converts audio and video files into accurate text transcriptions.</li>
+            <li><strong>Automatic Punctuation:</strong> Adds punctuation and formatting to transcriptions for better readability.</li>
+            <li><strong>Speaker Identification:</strong> Identifies and labels different speakers in a conversation or recording.</li>
+            <li><strong>Custom Vocabulary:</strong> Allows the addition of custom vocabulary and terms to improve transcription accuracy for specific jargon or names.</li>
+            <li><strong>Real-Time Transcription:</strong> Provides streaming transcription for real-time applications and live broadcasts.</li>
+            <li><strong>Multi-Language Support:</strong> Supports multiple languages and dialects for transcription.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates how AWS Transcribe processes audio and video files for transcription:</p>
+        <img src="https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2020/03/30/s3-to-lambda-transcription-7.png" alt="AWS Transcribe Architecture Diagram">
+        <ul>
+            <li><strong>Audio/Video Input:</strong> Upload audio or video files to Amazon S3 or stream directly to AWS Transcribe.</li>
+            <li><strong>Transcription Processing:</strong> AWS Transcribe processes the audio or video, converting speech into text.</li>
+            <li><strong>Text Output:</strong> Transcription results are available for download or retrieval through API.</li>
+            <li><strong>Integration:</strong> Results can be integrated into applications, search engines, or other AWS services.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Content Indexing:</strong> Automatically transcribe and index audio and video content for easier search and retrieval.</li>
+            <li><strong>Accessibility:</strong> Provide transcripts for videos to improve accessibility for hearing-impaired users.</li>
+            <li><strong>Customer Service:</strong> Transcribe customer service calls for analysis and improving customer support.</li>
+            <li><strong>Media and Entertainment:</strong> Create transcripts for interviews, podcasts, and media content for better content management.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Transcribe integrates with several AWS services to enhance its capabilities:</p>
+        <ul>
+            <li><strong>Amazon S3:</strong> Store audio and video files for processing and manage transcription results.</li>
+            <li><strong>AWS Lambda:</strong> Automate workflows and integrate transcription results into applications using Lambda functions.</li>
+            <li><strong>Amazon Comprehend:</strong> Analyze transcriptions for sentiment, key phrases, and other insights using Comprehend.</li>
+            <li><strong>Amazon Kinesis:</strong> Stream real-time audio data to Transcribe for live transcription and analysis.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li>AWS Transcribe provides automatic speech-to-text conversion for audio and video files.</li>
+            <li>Key features include speech-to-text conversion, automatic punctuation, speaker identification, and custom vocabulary support.</li>
+            <li>Understand how AWS Transcribe processes audio/video input, generates transcription results, and integrates with other AWS services.</li>
+            <li>Be familiar with use cases such as content indexing, accessibility, customer service, and media management.</li>
+            <li>Know how Transcribe integrates with services like S3, Lambda, Comprehend, and Kinesis for enhanced functionality.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
