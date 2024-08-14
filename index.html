@@ -99,8 +99,8 @@
                     <a href="./topics/7. Messaging/Amazon Pinpoint.html" data-topic="connect">Amazon Pinpoint</a>
                     <a href="./topics/7. Messaging/Simple Email Service.html" data-topic="control-tower">Simple Email Service</a>
                     <a href="./topics/7. Messaging/SNS.html" data-topic="identity-center">SNS</a>
-                    <a href="#" data-topic="systems-manager">SQS</a>
-                    <a href="#" data-topic="systems-manager">Simple Workflow</a>
+                    <a href="./topics/7. Messaging/SQS.html" data-topic="systems-manager">SQS</a>
+                    <a href="./topics/7. Messaging/simple workflow.html" data-topic="systems-manager">Simple Workflow</a>
                 </div>
             </div>
             <div class="section">
@@ -159,7 +159,185 @@
 
 
         <div class="middle-panel" id="content-panel">
-            <p>AWS Architecture.</p>
+           
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Certified Solutions Architect – Associate (SAA-C03) Exam Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Certified Solutions Architect – Associate (SAA-C03) Exam Notes</h1>
+        
+        <h2>Exam Overview</h2>
+        <p><strong>Duration:</strong> 130 minutes</p>
+        <p><strong>Number of Questions:</strong> 65</p>
+        <p><strong>Format:</strong> Multiple-choice and multiple-answer</p>
+        <p><strong>Cost:</strong> $150 USD</p>
+        <p><strong>Exam Languages:</strong> English, Japanese, Korean, and Simplified Chinese</p>
+
+        <h2>Domains Covered</h2>
+        <ul>
+            <li><strong>Design Resilient Architectures (30%)</strong></li>
+            <li><strong>Define Performant Architectures (28%)</strong></li>
+            <li><strong>Specify Secure Applications and Architectures (24%)</strong></li>
+            <li><strong>Design Cost-Optimized Architectures (18%)</strong></li>
+        </ul>
+
+        <h2>Key Topics</h2>
+
+        <h3>Design Resilient Architectures</h3>
+        <ul>
+            <li><strong>High Availability and Fault Tolerance:</strong>
+                <ul>
+                    <li><strong>Multi-AZ Deployments:</strong> Use for RDS, ElastiCache, and other managed services to ensure high availability.</li>
+                    <li><strong>Elastic Load Balancing (ELB):</strong> Distribute incoming application traffic across multiple targets, such as EC2 instances.</li>
+                    <li><strong>Auto Scaling:</strong> Automatically adjust the number of EC2 instances based on demand.</li>
+                    <li><strong>AWS Route 53:</strong> DNS service that can route traffic to healthy endpoints and provide failover.</li>
+                    <li><strong>Amazon S3 and Cross-Region Replication (CRR):</strong> Store and replicate data across different AWS regions.</li>
+                </ul>
+            </li>
+            <li><strong>Backup and Recovery:</strong>
+                <ul>
+                    <li><strong>AWS Backup:</strong> Centralized backup service for AWS services.</li>
+                    <li><strong>Amazon RDS Automated Backups and Snapshots:</strong> Ensure database backups and restore capabilities.</li>
+                    <li><strong>Versioning in S3:</strong> Enable and manage object versions in Amazon S3.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Define Performant Architectures</h3>
+        <ul>
+            <li><strong>Scalability:</strong>
+                <ul>
+                    <li><strong>Amazon EC2 Instance Types:</strong> Understand the different instance families and their use cases (e.g., compute-optimized, memory-optimized).</li>
+                    <li><strong>Amazon RDS Read Replicas:</strong> Improve read performance by replicating the database to multiple instances.</li>
+                    <li><strong>Amazon CloudFront:</strong> Content delivery network (CDN) to deliver content with low latency.</li>
+                    <li><strong>Amazon ElastiCache:</strong> In-memory caching for improved application performance.</li>
+                </ul>
+            </li>
+            <li><strong>Monitoring and Metrics:</strong>
+                <ul>
+                    <li><strong>Amazon CloudWatch:</strong> Monitor AWS resources and applications, set up alarms, and create dashboards.</li>
+                    <li><strong>AWS X-Ray:</strong> Analyze and debug distributed applications.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Specify Secure Applications and Architectures</h3>
+        <ul>
+            <li><strong>Identity and Access Management (IAM):</strong>
+                <ul>
+                    <li><strong>IAM Roles, Policies, and Groups:</strong> Manage user permissions and access control.</li>
+                    <li><strong>AWS Organizations:</strong> Manage and consolidate billing and policies across multiple AWS accounts.</li>
+                    <li><strong>AWS Cognito:</strong> Provide user sign-up, sign-in, and access control.</li>
+                </ul>
+            </li>
+            <li><strong>Data Protection:</strong>
+                <ul>
+                    <li><strong>Encryption:</strong> Use AWS Key Management Service (KMS) for data encryption at rest and in transit.</li>
+                    <li><strong>AWS Shield and AWS WAF:</strong> Protect against DDoS attacks and manage application firewall rules.</li>
+                    <li><strong>VPC Security Groups and NACLs:</strong> Control inbound and outbound traffic at the instance and subnet levels.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Design Cost-Optimized Architectures</h3>
+        <ul>
+            <li><strong>Cost Management:</strong>
+                <ul>
+                    <li><strong>AWS Cost Explorer:</strong> Analyze cost and usage patterns.</li>
+                    <li><strong>AWS Budgets:</strong> Set and track budgets for your AWS resources.</li>
+                    <li><strong>Savings Plans and Reserved Instances:</strong> Save costs by committing to a specific level of usage.</li>
+                </ul>
+            </li>
+            <li><strong>Resource Optimization:</strong>
+                <ul>
+                    <li><strong>Instance Right-Sizing:</strong> Use the AWS Compute Optimizer to choose the most appropriate instance types.</li>
+                    <li><strong>Storage Optimization:</strong> Use S3 Intelligent-Tiering and Lifecycle Policies to manage storage costs.</li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+
         <img src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2023/02/16/How-an-architecture-can-be-designed-with-AWS-Application-Composer.png" alt="AWS Proton Architecture Diagram">
             
         </div>
