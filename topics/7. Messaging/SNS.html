@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Simple Notification Service (SNS) - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Simple Notification Service (SNS)</h1>
+        <p>AWS Simple Notification Service (SNS) is a fully managed messaging service that enables you to decouple microservices, distributed systems, and serverless applications. SNS allows you to send messages to large numbers of subscribers, such as mobile devices, email, and other distributed services.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Pub/Sub Messaging:</strong> SNS allows you to create topics to which multiple subscribers can receive messages, enabling a publish-subscribe messaging model.</li>
+            <li><strong>Multiple Protocols:</strong> Supports various protocols, including HTTP/HTTPS, email, SMS, Lambda, and other AWS services.</li>
+            <li><strong>Message Filtering:</strong> Apply filters to route messages to specific subscribers based on attributes.</li>
+            <li><strong>Message Fanout:</strong> Send a single message to multiple destinations, such as SQS queues, Lambda functions, or other SNS topics.</li>
+            <li><strong>Durability and Scalability:</strong> SNS is designed for high availability, durability, and scalability to handle millions of messages per second.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates how AWS SNS facilitates the distribution of messages across multiple subscribers:</p>
+        <img src="https://docs.aws.amazon.com/images/sns/latest/dg/images/sns-delivery-protocols.png" alt="AWS SNS Architecture Diagram">
+        <ul>
+            <li><strong>Publishers:</strong> Publishers send messages to an SNS topic, which acts as a communication channel.</li>
+            <li><strong>Subscribers:</strong> Subscribers, such as SQS queues, Lambda functions, or mobile devices, receive messages from the SNS topic.</li>
+            <li><strong>Message Filtering:</strong> Filters can be applied to deliver specific messages to specific subscribers based on their attributes.</li>
+            <li><strong>Fanout:</strong> The same message can be sent to multiple endpoints, ensuring it reaches all intended recipients.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Application Integration:</strong> SNS is ideal for decoupling application components, enabling them to communicate asynchronously.</li>
+            <li><strong>Mobile Push Notifications:</strong> Send push notifications to mobile devices, using SNS to manage subscriptions and fanout.</li>
+            <li><strong>Message Broadcasting:</strong> Use SNS to broadcast messages to multiple systems and services simultaneously.</li>
+            <li><strong>Event-Driven Architectures:</strong> SNS can trigger Lambda functions or notify other AWS services in response to events.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS SNS integrates with various AWS services to provide a comprehensive messaging solution:</p>
+        <ul>
+            <li><strong>AWS Lambda:</strong> Automatically trigger Lambda functions in response to messages published to an SNS topic.</li>
+            <li><strong>Amazon SQS:</strong> Fan out messages to multiple SQS queues to buffer or store messages for processing.</li>
+            <li><strong>AWS CloudWatch:</strong> Monitor SNS message delivery and set alarms for delivery failures or other issues.</li>
+            <li><strong>Amazon Kinesis:</strong> Use SNS to distribute data streams to Kinesis for real-time processing and analysis.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li>Understand the pub/sub messaging model and how SNS facilitates decoupling of services in an architecture.</li>
+            <li>Know the various protocols supported by SNS, including HTTP/HTTPS, email, SMS, and Lambda.</li>
+            <li>Be familiar with message filtering and fanout capabilities, allowing messages to be routed or sent to multiple endpoints.</li>
+            <li>Remember the integration points with other AWS services like Lambda, SQS, and CloudWatch for building robust event-driven architectures.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
