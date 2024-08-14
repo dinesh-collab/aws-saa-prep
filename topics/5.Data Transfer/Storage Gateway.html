@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Storage Gateway - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Storage Gateway</h1>
+        <p>AWS Storage Gateway is a hybrid cloud storage service that provides on-premises access to virtually unlimited cloud storage. It seamlessly connects on-premises environments with AWS cloud storage, enabling you to store data securely and efficiently in AWS while maintaining low-latency access from on-premises applications.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Hybrid Cloud Storage:</strong> AWS Storage Gateway offers seamless integration between on-premises environments and AWS, enabling hybrid cloud storage solutions.</li>
+            <li><strong>Multiple Gateway Types:</strong> Supports various gateway types, including File Gateway, Volume Gateway, and Tape Gateway, to suit different storage needs.</li>
+            <li><strong>Data Encryption:</strong> All data transferred between your on-premises environment and AWS is encrypted using SSL, and data stored in AWS is encrypted at rest using AWS KMS.</li>
+            <li><strong>Low-Latency Access:</strong> Provides low-latency access to frequently accessed data, ensuring fast performance for on-premises applications.</li>
+            <li><strong>Cost-Effective Storage:</strong> Enables cost-effective storage by leveraging AWS cloud storage, reducing the need for on-premises storage infrastructure.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates how AWS Storage Gateway integrates your on-premises storage with AWS cloud storage:</p>
+        <img src="https://d1.awsstatic.com/solutions/guidance/images/architecture-diagrams/getting-started-with-aws-storage-tape-gateway.18a9eb5317697226218e91cd74d0e9441ce71721.png" alt="AWS Storage Gateway Architecture Diagram">
+        <ul>
+            <li><strong>On-Premises Applications:</strong> On-premises applications interact with AWS Storage Gateway as if it were a local storage device, providing seamless access to AWS cloud storage.</li>
+            <li><strong>Storage Gateway Appliance:</strong> The Storage Gateway appliance runs on-premises and acts as a bridge between your local environment and AWS cloud storage.</li>
+            <li><strong>AWS Cloud Storage:</strong> Data stored on the Storage Gateway is backed by Amazon S3, Amazon EBS, or Amazon Glacier, depending on the gateway type.</li>
+            <li><strong>Data Transfer and Caching:</strong> Frequently accessed data is cached locally on the gateway appliance, while less frequently accessed data is stored in the cloud, optimizing performance and cost.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Data Backup and Archiving:</strong> Use AWS Storage Gateway for efficient, secure backup and archiving of on-premises data to AWS cloud storage.</li>
+            <li><strong>Disaster Recovery:</strong> Enable disaster recovery by replicating critical data to AWS, ensuring data availability in the event of an on-premises failure.</li>
+            <li><strong>Hybrid Cloud Architectures:</strong> Integrate on-premises applications with AWS storage services, enabling a hybrid cloud storage solution.</li>
+            <li><strong>Tape Replacement:</strong> Replace physical tape libraries with Tape Gateway, leveraging the scalability and durability of Amazon S3 and Amazon Glacier.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Storage Gateway integrates with various AWS services to provide a comprehensive storage solution:</p>
+        <ul>
+            <li><strong>Amazon S3:</strong> Store data in Amazon S3 using File Gateway for scalable, secure, and durable cloud storage.</li>
+            <li><strong>Amazon Glacier:</strong> Archive data to Amazon Glacier using Tape Gateway for cost-effective, long-term storage.</li>
+            <li><strong>Amazon EBS:</strong> Use Volume Gateway to create EBS snapshots, enabling efficient backups and disaster recovery.</li>
+            <li><strong>AWS CloudTrail:</strong> Monitor and log all API calls made by AWS Storage Gateway, ensuring compliance and security.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
