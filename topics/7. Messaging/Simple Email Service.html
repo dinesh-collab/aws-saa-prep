@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Simple Email Service (SES) - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Simple Email Service (SES)</h1>
+        <p>AWS Simple Email Service (SES) is a cloud-based email sending service designed to help businesses send marketing, notification, and transactional emails. SES provides reliable, scalable, and cost-effective email delivery, with built-in features to improve email deliverability.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Email Sending:</strong> Send emails at scale using a reliable and cost-effective platform.</li>
+            <li><strong>Deliverability Management:</strong> SES offers tools like reputation dashboards, dedicated IPs, and email authentication to improve deliverability.</li>
+            <li><strong>Flexible Configuration:</strong> Integrate SES with your applications via SMTP or AWS SDKs for customized email delivery.</li>
+            <li><strong>Inbound Email:</strong> SES can receive and process incoming emails, allowing for automatic responses, email filtering, and storage.</li>
+            <li><strong>Compliance and Security:</strong> SES supports encryption, authentication, and compliance with industry standards like GDPR and HIPAA.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates how AWS SES facilitates email sending and deliverability management:</p>
+        <img src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2022/11/19/email-delta-ra.png" alt="AWS SES Architecture Diagram">
+        <img src="https://d2908q01vomqb2.cloudfront.net/632667547e7cd3e0466547863e1207a8c0c0c549/2021/05/18/ForwardingEmailsByContentArch-1-1024x603.png" alt="AWS SES Architecture Diagram">
+        <ul>
+            <li><strong>Email Sending:</strong> Send emails through SMTP or API integration with AWS SES.</li>
+            <li><strong>Deliverability Tools:</strong> Utilize reputation dashboards, dedicated IP addresses, and feedback loops to enhance email delivery.</li>
+            <li><strong>Inbound Email Processing:</strong> Receive and process emails, with the ability to store, filter, or respond to incoming messages.</li>
+            <li><strong>Monitoring and Analytics:</strong> Access detailed metrics on email delivery and open rates to optimize your campaigns.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Transactional Emails:</strong> Send order confirmations, password resets, and other transactional emails with high deliverability.</li>
+            <li><strong>Marketing Campaigns:</strong> Use SES for large-scale email marketing campaigns with detailed tracking and analytics.</li>
+            <li><strong>Automated Responses:</strong> Set up automated email responses for incoming emails based on predefined rules.</li>
+            <li><strong>Notification Services:</strong> Send real-time notifications to customers or internal teams via email.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS SES integrates with several AWS services to provide a comprehensive email sending solution:</p>
+        <ul>
+            <li><strong>AWS Lambda:</strong> Trigger custom functions and workflows in response to incoming emails.</li>
+            <li><strong>Amazon S3:</strong> Store inbound emails or email attachments in Amazon S3 for long-term storage.</li>
+            <li><strong>Amazon SNS:</strong> Send notifications based on email events like bounces and complaints.</li>
+            <li><strong>AWS CloudWatch:</strong> Monitor email sending metrics and set up alarms for unusual patterns or issues.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li>Understand how AWS SES is used for sending and receiving emails, including key features like deliverability management and inbound email processing.</li>
+            <li>Know the integration points with other AWS services such as Lambda, S3, and SNS for extended functionality.</li>
+            <li>Be familiar with use cases like transactional emails, marketing campaigns, and automated responses.</li>
+            <li>Remember the compliance and security features available in SES, including encryption and authentication mechanisms.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
