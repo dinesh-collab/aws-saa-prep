@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Virtual Interfaces - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Virtual Interfaces</h1>
+        <p>AWS Virtual Interfaces are a feature of AWS Direct Connect that allow you to connect your on-premises network to AWS through a dedicated connection. Virtual Interfaces enable you to connect to your Amazon VPC or AWS services with lower latency and improved bandwidth compared to traditional internet connections.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Private Virtual Interface:</strong> Connects directly to your Amazon VPC using a private IP address. Ideal for accessing AWS resources within your VPC securely and with low latency.</li>
+            <li><strong>Public Virtual Interface:</strong> Provides access to AWS public services such as Amazon S3, Amazon DynamoDB, and others using public IP addresses. Suitable for accessing AWS services over a dedicated connection without going through the internet.</li>
+            <li><strong>Transit Virtual Interface:</strong> Allows you to connect to multiple VPCs across different AWS accounts using AWS Transit Gateway. Provides simplified network management and scalability.</li>
+            <li><strong>Bandwidth Options:</strong> Offers various bandwidth options, from 1 Gbps to 10 Gbps, to match your network requirements.</li>
+            <li><strong>High Availability:</strong> Supports multiple virtual interfaces for redundancy and failover to ensure continuous connectivity.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates how AWS Virtual Interfaces integrate with AWS Direct Connect and your on-premises network:</p>
+        <img src="https://docs.aws.amazon.com/images/directconnect/latest/UserGuide/images/dx-vifs.png" alt="AWS Virtual Interfaces Architecture Diagram">
+        <ul>
+            <li><strong>Direct Connect Connection:</strong> A dedicated, high-bandwidth connection between your on-premises network and AWS.</li>
+            <li><strong>Virtual Interfaces:</strong> Configured to access either private IP addresses (Private Virtual Interface) or public IP addresses (Public Virtual Interface).</li>
+            <li><strong>Amazon VPC:</strong> For Private Virtual Interfaces, securely connects to resources within your VPC.</li>
+            <li><strong>AWS Public Services:</strong> For Public Virtual Interfaces, access services such as S3 and DynamoDB.</li>
+            <li><strong>AWS Transit Gateway:</strong> For Transit Virtual Interfaces, enables connections to multiple VPCs and AWS accounts.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>High-Performance Applications:</strong> Use Private Virtual Interfaces to connect mission-critical applications in your VPC with low latency and high throughput.</li>
+            <li><strong>Secure Data Transfer:</strong> Utilize Private Virtual Interfaces to securely transfer data between your on-premises data center and AWS, avoiding the public internet.</li>
+            <li><strong>Access AWS Public Services:</strong> Use Public Virtual Interfaces to connect to AWS services over a dedicated line, ensuring stable and reliable access.</li>
+            <li><strong>Multi-Region Connectivity:</strong> Implement Transit Virtual Interfaces to connect multiple VPCs across regions or accounts, simplifying network architecture and management.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Virtual Interfaces integrate with various AWS services to provide a robust networking solution:</p>
+        <ul>
+            <li><strong>Amazon VPC:</strong> Connects your on-premises network directly to your VPC for secure and efficient access to AWS resources.</li>
+            <li><strong>AWS Transit Gateway:</strong> Enables you to manage and scale connections between multiple VPCs and on-premises networks through a central hub.</li>
+            <li><strong>AWS Direct Connect Gateway:</strong> Allows you to connect your Direct Connect connection to multiple VPCs and accounts using private virtual interfaces.</li>
+            <li><strong>AWS CloudWatch:</strong> Monitors and logs the performance and status of your Direct Connect connections and virtual interfaces.</li>
+            <li><strong>AWS CloudTrail:</strong> Provides logging and auditing of API calls made to manage your Direct Connect connections and virtual interfaces.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
