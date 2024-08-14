@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Billing - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Billing</h1>
+        <p>AWS Billing is a critical component for managing and understanding your AWS costs. AWS provides various tools to help you monitor, allocate, and optimize your cloud spending, ensuring efficient use of resources and budget control.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Cost Explorer:</strong> View and analyze your AWS costs and usage, create custom reports, and visualize data to identify trends and anomalies.</li>
+            <li><strong>Budgets:</strong> Set custom cost and usage budgets, and receive alerts when your spending approaches or exceeds your budgeted thresholds.</li>
+            <li><strong>Detailed Billing Reports:</strong> Get detailed reports on your AWS usage and costs for in-depth analysis and reconciliation.</li>
+            <li><strong>Reserved Instances Reporting:</strong> Track utilization and savings from Reserved Instances (RIs) to assess the effectiveness of your investments.</li>
+            <li><strong>Cost Allocation Tags:</strong> Tags applied to resources to categorize and track costs, useful for cost allocation and departmental budgeting.</li>
+            <li><strong>Cost and Usage Report (CUR):</strong> Detailed CSV report providing information about AWS usage and costs for integration with billing tools.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates the structure of AWS Billing services and how they interact with other AWS components:</p>
+        <img src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2024/07/10/fig1-automate-billing-bedrock-1024x489.png" alt="AWS Billing Architecture Diagram">
+        <ul>
+            <li><strong>Cost Explorer:</strong> Tool for visualizing and analyzing costs.</li>
+            <li><strong>Budgets:</strong> Feature for setting and tracking cost and usage budgets.</li>
+            <li><strong>Billing Reports:</strong> Detailed reports for usage and cost analysis.</li>
+            <li><strong>Cost Allocation Tags:</strong> Tags for categorizing and tracking costs.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Cost Management:</strong> Efficiently manage and monitor cloud spending to avoid unexpected costs.</li>
+            <li><strong>Budgeting:</strong> Set and track budgets to maintain financial control over your AWS resources.</li>
+            <li><strong>Cost Optimization:</strong> Utilize detailed reports and analysis to optimize cloud spending and resource utilization.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Billing integrates with several AWS services to provide a comprehensive cost management solution:</p>
+        <ul>
+            <li><strong>AWS CloudFormation:</strong> Use CloudFormation for defining and provisioning infrastructure resources in your billing reports.</li>
+            <li><strong>AWS Cost Management:</strong> Suite of services including Cost Explorer, Budgets, and Cost and Usage Reports for managing AWS spending.</li>
+            <li><strong>AWS Marketplace:</strong> Offers third-party solutions for cost management and optimization available for purchase.</li>
+            <li><strong>AWS Trusted Advisor:</strong> Provides recommendations to reduce costs and improve resource utilization.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
