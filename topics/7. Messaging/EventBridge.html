@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS EventBridge - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS EventBridge</h1>
+        <p>AWS EventBridge is a serverless event bus service that makes it easy to connect applications using events. It provides a way to ingest, filter, and route events from various sources to targets in your AWS environment, facilitating event-driven architectures.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Event Bus:</strong> Allows you to create event buses to route events from different sources to target services.</li>
+            <li><strong>Event Filtering:</strong> Provides filtering capabilities to process only specific events based on rules and patterns.</li>
+            <li><strong>Event Replay:</strong> Allows you to replay past events for debugging or reprocessing.</li>
+            <li><strong>Integration with AWS Services:</strong> Seamlessly integrates with other AWS services such as Lambda, SQS, SNS, and Step Functions.</li>
+            <li><strong>Schema Registry:</strong> Maintains a schema registry to manage and discover event schemas.</li>
+            <li><strong>Custom Events:</strong> Supports custom events from your own applications and services.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates how AWS EventBridge routes events through its architecture:</p>
+        <img src="https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2020/01/31/eventbridge-content-filtering-1.png" alt="AWS EventBridge Architecture Diagram">
+        <ul>
+            <li><strong>Event Sources:</strong> Events can come from AWS services, custom applications, or SaaS applications.</li>
+            <li><strong>Event Bus:</strong> Events are sent to the EventBridge event bus, where they are processed based on defined rules.</li>
+            <li><strong>Event Rules:</strong> Rules filter and route events to the appropriate targets.</li>
+            <li><strong>Targets:</strong> Event targets can include Lambda functions, SQS queues, SNS topics, Step Functions, and more.</li>
+            <li><strong>Schema Registry:</strong> Events and their schemas are managed in the schema registry for better integration and management.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Application Integration:</strong> Integrate different services and applications by routing events between them.</li>
+            <li><strong>Event-Driven Architectures:</strong> Build and manage event-driven architectures that react to events in real time.</li>
+            <li><strong>Workflow Automation:</strong> Trigger automated workflows based on specific events or patterns.</li>
+            <li><strong>Real-Time Analytics:</strong> Collect and process events in real time for analytics and monitoring purposes.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS EventBridge integrates with a variety of AWS services to provide a comprehensive event-driven solution:</p>
+        <ul>
+            <li><strong>AWS Lambda:</strong> Invoke Lambda functions in response to events for serverless processing.</li>
+            <li><strong>Amazon SQS:</strong> Send events to SQS queues for decoupling and asynchronous processing.</li>
+            <li><strong>Amazon SNS:</strong> Publish events to SNS topics for notifications and further event propagation.</li>
+            <li><strong>AWS Step Functions:</strong> Trigger Step Functions workflows to orchestrate complex processes based on events.</li>
+            <li><strong>AWS Glue:</strong> Integrate with AWS Glue for ETL operations based on events.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li>AWS EventBridge is a serverless event bus service for connecting and routing events between AWS services and applications.</li>
+            <li>Key features include event buses, filtering, replay capabilities, schema registry, and custom events.</li>
+            <li>Understand the architecture of EventBridge, including event sources, event buses, rules, targets, and schema registry.</li>
+            <li>Familiarize yourself with use cases such as application integration, event-driven architectures, workflow automation, and real-time analytics.</li>
+            <li>Be aware of how EventBridge integrates with services like Lambda, SQS, SNS, Step Functions, and Glue.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
