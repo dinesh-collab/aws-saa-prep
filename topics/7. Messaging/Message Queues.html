@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Message Queues - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Message Queues</h1>
+        <p>AWS offers several messaging services to facilitate communication between distributed systems and components. These services provide reliable and scalable messaging solutions that support asynchronous communication, decoupling, and coordination of tasks.</p>
+
+        <h2>Key Services</h2>
+        <ul>
+            <li><strong>Amazon SQS (Simple Queue Service):</strong> A fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications. It offers two types of queues: Standard Queues (provides best-effort ordering and at-least-once delivery) and FIFO Queues (guarantees order and exactly-once processing).</li>
+            <li><strong>Amazon SNS (Simple Notification Service):</strong> A fully managed pub/sub messaging service that allows you to send messages to a large number of subscribers, including email, SMS, and other applications. SNS supports various message formats and delivery protocols.</li>
+            <li><strong>AWS MQ:</strong> A managed message broker service for Apache ActiveMQ and RabbitMQ, which provides a fully managed message broker service for applications that rely on message brokers. AWS MQ supports a wide range of messaging protocols and ensures compatibility with existing applications.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates how AWS messaging services work:</p>
+        <img src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2021/08/17/Fig1-queue-integration.png" alt="AWS Messaging Services Architecture Diagram">
+        <ul>
+            <li><strong>Message Producers:</strong> Applications or services that send messages to a queue or topic.</li>
+            <li><strong>Queues and Topics:</strong> Amazon SQS queues and Amazon SNS topics act as intermediaries to receive and store messages until they can be processed.</li>
+            <li><strong>Message Consumers:</strong> Applications or services that receive and process messages from queues or topics.</li>
+            <li><strong>Message Processing:</strong> Consumers process the messages, and depending on the service, may involve further actions like data transformation, integration, or invoking other services.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Decoupling Microservices:</strong> Use Amazon SQS to decouple and scale microservices by enabling them to communicate asynchronously.</li>
+            <li><strong>Event Notification:</strong> Utilize Amazon SNS to send notifications to multiple subscribers in real-time, such as sending alerts or updates.</li>
+            <li><strong>Application Integration:</strong> Leverage AWS MQ for integrating legacy applications with modern cloud-based systems, ensuring compatibility with various messaging protocols.</li>
+            <li><strong>Order Processing:</strong> Implement Amazon SQS FIFO Queues for processing orders in a specific sequence and ensuring exactly-once delivery.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Message Queues integrate with various AWS services to provide comprehensive messaging and communication solutions:</p>
+        <ul>
+            <li><strong>AWS Lambda:</strong> Trigger Lambda functions in response to messages in Amazon SQS or notifications from Amazon SNS.</li>
+            <li><strong>AWS Step Functions:</strong> Orchestrate workflows that involve message queues and notification services.</li>
+            <li><strong>AWS CloudWatch:</strong> Monitor and visualize the performance and health of message queues and topics.</li>
+            <li><strong>AWS IAM:</strong> Control access to messaging services using IAM policies and roles.</li>
+            <li><strong>AWS Glue:</strong> Integrate with Amazon SQS for processing data and automating data workflows.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li>Amazon SQS is used for decoupling and scaling distributed systems, with Standard and FIFO queues offering different features.</li>
+            <li>Amazon SNS provides pub/sub messaging capabilities, allowing for the distribution of messages to multiple subscribers.</li>
+            <li>AWS MQ supports message brokers and is compatible with existing messaging protocols.</li>
+            <li>Understand how to integrate AWS messaging services with other AWS services like Lambda, Step Functions, and CloudWatch.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
