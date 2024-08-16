@@ -1,4 +1,4 @@
-#  AWS Certified Solutions Architect – Associate (SAA-C03) Exam Notes<
+#  AWS Certified Solutions Architect – Associate (SAA-C03) Exam Notes
 
 Key Topics covered
 
