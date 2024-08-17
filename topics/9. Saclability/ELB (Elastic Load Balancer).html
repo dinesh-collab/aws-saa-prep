@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Elastic Load Balancer (ELB) - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Elastic Load Balancer (ELB)</h1>
+        <p>AWS Elastic Load Balancer (ELB) automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, and IP addresses. ELB helps ensure application availability and fault tolerance by spreading traffic evenly across multiple resources.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Load Balancing Across Multiple Targets:</strong> ELB distributes traffic across multiple targets in one or more Availability Zones, ensuring application scalability and fault tolerance.</li>
+            <li><strong>Supports Multiple Protocols:</strong> ELB supports HTTP, HTTPS, TCP, and UDP protocols, making it suitable for a wide range of applications.</li>
+            <li><strong>Three Types of Load Balancers:</strong> ELB offers three types of load balancers: Application Load Balancer (ALB), Network Load Balancer (NLB), and Gateway Load Balancer (GLB), each optimized for different use cases.</li>
+            <li><strong>Automatic Scaling:</strong> ELB scales its capacity to handle the traffic load as your application demand increases or decreases, without manual intervention.</li>
+            <li><strong>Health Checks:</strong> ELB continuously monitors the health of the registered targets and routes traffic only to healthy instances.</li>
+            <li><strong>Integration with AWS Services:</strong> ELB integrates seamlessly with other AWS services like Auto Scaling, Route 53, CloudWatch, and more, providing a comprehensive solution for scaling and monitoring applications.</li>
+        </ul>
+
+        <h2>Types of Elastic Load Balancers</h2>
+        <ul>
+            <li><strong>Application Load Balancer (ALB):</strong> Operates at the application layer (Layer 7) and is ideal for web applications. ALB supports advanced request routing, SSL termination, and integrates with AWS WAF for security.</li>
+            <li><strong>Network Load Balancer (NLB):</strong> Operates at the transport layer (Layer 4) and is designed for applications that require ultra-low latency and high throughput. NLB supports static IP addresses and can handle millions of requests per second.</li>
+            <li><strong>Gateway Load Balancer (GLB):</strong> Operates at Layer 3 and Layer 4 and is used for deploying and managing virtual appliances. GLB simplifies the integration of third-party virtual appliances into your network.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates how AWS Elastic Load Balancer distributes traffic across multiple targets:</p>
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*g418EM8dPJEAq3hMq9wMTA.png" alt="AWS Elastic Load Balancer Architecture Diagram">
+        <ul>
+            <li><strong>Clients:</strong> End-users or applications that send requests to your application.</li>
+            <li><strong>Elastic Load Balancer:</strong> The ELB distributes incoming traffic across registered targets (e.g., EC2 instances) in one or more Availability Zones.</li>
+            <li><strong>Registered Targets:</strong> The EC2 instances, containers, or IP addresses that are registered with the ELB to receive traffic.</li>
+            <li><strong>Auto Scaling Groups:</strong> Automatically adjusts the number of registered targets based on demand.</li>
+            <li><strong>Availability Zones:</strong> ELB distributes traffic across multiple Availability Zones to increase fault tolerance and reduce latency.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>High Availability:</strong> Improve the availability of your application by distributing traffic across multiple targets and Availability Zones.</li>
+            <li><strong>Scalability:</strong> Automatically scale your application to handle traffic spikes by adding or removing targets based on demand.</li>
+            <li><strong>Load Distribution:</strong> Evenly distribute traffic across multiple instances or containers to optimize resource utilization and reduce latency.</li>
+            <li><strong>Security:</strong> Use SSL termination on the ELB to offload SSL processing from your application servers, and integrate with AWS WAF to protect against common web exploits.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Elastic Load Balancer integrates with several AWS services to provide a comprehensive solution:</p>
+        <ul>
+            <li><strong>AWS Auto Scaling:</strong> Automatically scale the number of instances or containers in response to traffic demand.</li>
+            <li><strong>Amazon Route 53:</strong> Use Route 53 to direct traffic to your ELB using DNS-based load balancing.</li>
+            <li><strong>AWS CloudWatch:</strong> Monitor ELB performance and health metrics, and set alarms for automatic response to changes in traffic patterns.</li>
+            <li><strong>AWS Certificate Manager (ACM):</strong> Manage SSL/TLS certificates for your ELB, simplifying the process of securing your application.</li>
+            <li><strong>AWS WAF:</strong> Protect your application from common web exploits by integrating AWS WAF with your ALB.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Types of Load Balancers:</strong> Be familiar with the differences between ALB, NLB, and GLB, and understand their use cases.</li>
+            <li><strong>Health Checks:</strong> Understand how ELB performs health checks and how it routes traffic only to healthy targets.</li>
+            <li><strong>Cross-Zone Load Balancing:</strong> Know how cross-zone load balancing works and when to enable it.</li>
+            <li><strong>SSL Termination:</strong> Remember that ALB and NLB support SSL termination, offloading SSL processing from your application servers.</li>
+            <li><strong>Sticky Sessions:</strong> Understand how sticky sessions (session affinity) work with ALB and NLB to maintain user session state.</li>
+            <li><strong>Pricing:</strong> Be aware of ELB pricing models, including per-hour and per-GB data processed charges.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
