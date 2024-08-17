@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Step Functions - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Step Functions</h1>
+        <p>AWS Step Functions is a fully managed service that enables you to coordinate components of distributed applications and microservices using visual workflows. It allows you to build applications by stitching together AWS services and custom code into automated workflows.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Visual Workflow:</strong> Step Functions provides a graphical console that helps visualize the sequence of steps in your application, making it easy to build and understand complex workflows.</li>
+            <li><strong>State Machines:</strong> Step Functions uses state machines to define the flow of your application. Each state in the machine represents a step in your workflow, such as a task, choice, wait, or fail state.</li>
+            <li><strong>Integration with AWS Services:</strong> Seamlessly integrates with a variety of AWS services such as Lambda, ECS, Fargate, SNS, SQS, DynamoDB, and more.</li>
+            <li><strong>Automatic Error Handling:</strong> Step Functions includes built-in error handling, retry logic, and the ability to catch and handle exceptions, ensuring your application is resilient to failures.</li>
+            <li><strong>Parallel Execution:</strong> Supports parallel execution of tasks, enabling the processing of multiple tasks simultaneously for faster execution.</li>
+            <li><strong>Event-Driven Workflows:</strong> Allows workflows to be triggered by events from other AWS services, making it ideal for event-driven architectures.</li>
+        </ul>
+
+        <h2>Common Use Cases</h2>
+        <ul>
+            <li><strong>Microservices Orchestration:</strong> Step Functions can coordinate microservices in a distributed architecture, ensuring that each service performs its task in the correct order.</li>
+            <li><strong>Data Processing Pipelines:</strong> Useful for building data processing workflows that involve multiple steps such as data extraction, transformation, and loading (ETL).</li>
+            <li><strong>Batch Processing:</strong> Automate and manage batch processing jobs that require the coordination of multiple AWS services.</li>
+            <li><strong>Machine Learning Workflows:</strong> Orchestrate machine learning workflows, such as training, validating, and deploying models with different AWS services.</li>
+            <li><strong>Order Fulfillment:</strong> Manage complex order processing workflows, ensuring that all necessary steps are completed before moving to the next phase.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates how AWS Step Functions orchestrates tasks in a distributed application:</p>
+        <img src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2022/03/22/Fig1-multi-lang-1024x922.png" alt="AWS Step Functions Architecture Diagram">
+        <ul>
+            <li><strong>State Machine:</strong> A state machine is the central component of Step Functions that defines the workflow logic and the sequence of steps.</li>
+            <li><strong>Tasks:</strong> Individual units of work in a state machine that perform a specific operation, such as invoking a Lambda function or calling an API.</li>
+            <li><strong>Transitions:</strong> Define how the state machine moves from one state to another based on the output of the current state.</li>
+            <li><strong>Parallel Execution:</strong> Allows the state machine to execute multiple tasks concurrently, improving the efficiency of the workflow.</li>
+            <li><strong>Choice State:</strong> Provides conditional branching in the state machine, enabling different execution paths based on conditions.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Step Functions integrates with several AWS services, making it a powerful tool for building complex workflows:</p>
+        <ul>
+            <li><strong>AWS Lambda:</strong> Invoke Lambda functions to execute code without provisioning or managing servers.</li>
+            <li><strong>Amazon ECS/Fargate:</strong> Run containerized tasks as part of your workflow using Amazon ECS or Fargate.</li>
+            <li><strong>Amazon SNS/SQS:</strong> Send notifications or messages between distributed components using SNS or SQS.</li>
+            <li><strong>AWS Batch:</strong> Manage batch processing jobs as part of your state machine workflow.</li>
+            <li><strong>AWS Glue:</strong> Orchestrate ETL jobs using AWS Glue as part of a data processing pipeline.</li>
+            <li><strong>Amazon DynamoDB:</strong> Store and retrieve application state data using DynamoDB.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>State Machines:</strong> Understand the components of a state machine, including tasks, transitions, and choice states.</li>
+            <li><strong>Integration with AWS Services:</strong> Be familiar with how Step Functions integrates with other AWS services like Lambda, ECS, SQS, SNS, and DynamoDB.</li>
+            <li><strong>Error Handling:</strong> Remember that Step Functions includes built-in retry mechanisms and can catch and handle errors within workflows.</li>
+            <li><strong>Execution History:</strong> Understand how to view and interpret the execution history of state machines for troubleshooting and monitoring purposes.</li>
+            <li><strong>Parallel Execution:</strong> Know how to configure parallel execution in Step Functions to improve workflow efficiency.</li>
+            <li><strong>Pricing:</strong> Be aware of Step Functions pricing, which is based on the number of state transitions in your workflows.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
