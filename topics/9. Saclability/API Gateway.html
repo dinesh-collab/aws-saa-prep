@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS API Gateway - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS API Gateway</h1>
+        <p>AWS API Gateway is a fully managed service that allows developers to create, publish, maintain, monitor, and secure APIs at any scale. It enables you to create RESTful APIs and WebSocket APIs that are essential for building serverless applications, microservices, and integrating with external systems.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>API Creation:</strong> Easily create RESTful APIs or WebSocket APIs that can be integrated with AWS Lambda, EC2, or other AWS services.</li>
+            <li><strong>Security:</strong> Secure your APIs with AWS Identity and Access Management (IAM), API keys, or custom authorizers, and enable DDoS protection using AWS Shield.</li>
+            <li><strong>Monitoring & Analytics:</strong> Monitor API activity using Amazon CloudWatch, enabling you to track metrics like latency, error rates, and request counts.</li>
+            <li><strong>API Lifecycle Management:</strong> Manage multiple API versions, stages (e.g., development, testing, production), and deploy updates with zero downtime.</li>
+            <li><strong>Throttling & Quotas:</strong> Control API usage by setting request throttling and quotas to prevent abuse and manage API traffic effectively.</li>
+            <li><strong>Caching:</strong> Improve API performance by enabling response caching, reducing the need for back-end processing for frequently accessed resources.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates how AWS API Gateway integrates with other AWS services to provide a robust API management solution:</p>
+        <img src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2023/08/11/Figure-1..png" alt="AWS API Gateway Architecture Diagram">
+        <ul>
+            <li><strong>Client:</strong> Users or applications that make API requests.</li>
+            <li><strong>API Gateway:</strong> Acts as the "front door" for your APIs, handling requests, processing them, and routing them to the appropriate back-end services.</li>
+            <li><strong>AWS Lambda:</strong> A serverless compute service that can be triggered by API Gateway to process requests and return responses.</li>
+            <li><strong>Amazon CloudWatch:</strong> Monitors API activity and logs metrics such as latency, error rates, and request counts.</li>
+            <li><strong>Amazon S3:</strong> Store static content or files that can be accessed via the API Gateway.</li>
+        </ul>
+
+        <h2>Use Cases</h2>
+        <ul>
+            <li><strong>Serverless Applications:</strong> Build fully serverless applications by integrating API Gateway with AWS Lambda for backend processing.</li>
+            <li><strong>Microservices Architectures:</strong> Create APIs that serve as the interface between different microservices, allowing them to communicate and work together.</li>
+            <li><strong>WebSocket APIs:</strong> Use WebSocket APIs for real-time communication, such as chat applications, live data feeds, or interactive dashboards.</li>
+            <li><strong>API Monetization:</strong> Create and manage a marketplace for your APIs, controlling access and monetizing usage.</li>
+            <li><strong>Mobile Backend:</strong> Build APIs that serve as the backend for mobile applications, handling data storage, user authentication, and more.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS API Gateway integrates with several AWS services to provide a comprehensive API management solution:</p>
+        <ul>
+            <li><strong>AWS Lambda:</strong> Run code in response to API requests without provisioning or managing servers.</li>
+            <li><strong>Amazon S3:</strong> Serve static content directly from S3 using API Gateway.</li>
+            <li><strong>AWS CloudFront:</strong> Distribute your API globally using CloudFront for low latency and high availability.</li>
+            <li><strong>AWS WAF:</strong> Protect your APIs from common web exploits by integrating AWS Web Application Firewall (WAF) with API Gateway.</li>
+            <li><strong>AWS Cognito:</strong> Secure your APIs with user authentication and authorization through AWS Cognito.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Integration Types:</strong> Understand the different integration types (Lambda Proxy, HTTP Proxy, AWS Service) and when to use them.</li>
+            <li><strong>Security Mechanisms:</strong> Be familiar with securing APIs using IAM, API keys, and custom authorizers (e.g., Lambda Authorizers).</li>
+            <li><strong>Throttling & Quotas:</strong> Remember how to set request throttling and usage quotas to manage API traffic and prevent abuse.</li>
+            <li><strong>Monitoring & Logging:</strong> Know how to monitor API performance and activity using CloudWatch metrics and logs.</li>
+            <li><strong>Stages & Deployments:</strong> Understand how to manage different API stages and deploy new versions of your API without downtime.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
