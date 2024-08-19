@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Aurora - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>Amazon Aurora</h1>
+        <p>Amazon Aurora is a MySQL- and PostgreSQL-compatible relational database engine that combines the performance and availability of high-end commercial databases with the simplicity and cost-effectiveness of open-source databases. Aurora is part of the Amazon RDS (Relational Database Service) family and is fully managed by AWS, meaning it handles time-consuming tasks such as provisioning, patching, backup, recovery, and failover automatically.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>High Performance:</strong> Aurora offers up to five times better performance than standard MySQL databases and three times better than standard PostgreSQL databases, with the same level of reliability and security.</li>
+            <li><strong>Scalability:</strong> Automatically scales storage up to 128 TB per database instance and allows for read replica scaling to accommodate thousands of concurrent queries.</li>
+            <li><strong>High Availability:</strong> Aurora provides multi-AZ (Availability Zone) replication with automated failover, ensuring continuous availability and minimal downtime.</li>
+            <li><strong>Automated Backups:</strong> Continuous backups to Amazon S3 and point-in-time recovery ensure that your data is always protected.</li>
+            <li><strong>Global Database:</strong> Aurora Global Database allows for a single database to span multiple AWS regions, enabling low-latency global reads and disaster recovery with cross-region replication.</li>
+            <li><strong>Compatibility:</strong> Aurora is compatible with both MySQL and PostgreSQL, making it easy to migrate existing applications with minimal changes.</li>
+        </ul>
+
+        <h2>Common Use Cases</h2>
+        <ul>
+            <li><strong>High-Performance Applications:</strong> Use Aurora for applications that require high throughput and low latency, such as online transaction processing (OLTP) systems.</li>
+            <li><strong>Scalable Web Applications:</strong> Aurora is ideal for web applications that need to scale quickly to handle increasing traffic, providing both read and write scalability.</li>
+            <li><strong>Disaster Recovery:</strong> Aurora’s Global Database feature allows you to set up cross-region replicas for disaster recovery, ensuring that your database is resilient to regional failures.</li>
+            <li><strong>Cost-Effective Database Migration:</strong> Migrate from expensive commercial databases to Aurora to reduce costs without sacrificing performance or reliability.</li>
+            <li><strong>Multi-Region Applications:</strong> Use Aurora Global Database to support applications that serve users across multiple regions, reducing latency and improving user experience.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates how Amazon Aurora is architected for high performance, availability, and scalability:</p>
+        <img src="https://docs.aws.amazon.com/images/AmazonRDS/latest/AuroraUserGuide/images/AuroraArch001.png" alt="Amazon Aurora Architecture Diagram">
+        <ul>
+            <li><strong>Storage Layer:</strong> Aurora’s distributed, fault-tolerant, self-healing storage system automatically replicates data across multiple Availability Zones.</li>
+            <li><strong>Compute Layer:</strong> Aurora separates the compute layer from the storage layer, allowing each to scale independently based on your needs.</li>
+            <li><strong>Replication:</strong> Aurora supports both synchronous replication for high availability and asynchronous replication for read scaling and cross-region replication.</li>
+            <li><strong>Backups:</strong> Continuous backups are stored in Amazon S3, with point-in-time recovery options available to restore your database to any point in time.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>Amazon Aurora integrates with a variety of AWS services to provide a seamless database experience:</p>
+        <ul>
+            <li><strong>Amazon RDS:</strong> Aurora is part of the RDS family, and it integrates with other RDS services like RDS Proxy, IAM authentication, and Performance Insights.</li>
+            <li><strong>AWS Lambda:</strong> Use AWS Lambda to build serverless applications that interact with your Aurora database for scalable and efficient processing.</li>
+            <li><strong>Amazon CloudWatch:</strong> Monitor your Aurora databases using Amazon CloudWatch to gain insights into performance, resource utilization, and operational health.</li>
+            <li><strong>AWS DMS:</strong> Migrate existing databases to Amazon Aurora using the AWS Database Migration Service (DMS) with minimal downtime.</li>
+            <li><strong>Amazon S3:</strong> Utilize Amazon S3 for continuous backups and to store database snapshots, ensuring your data is always protected.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Aurora vs. RDS:</strong> Understand the differences between Amazon Aurora and standard RDS databases, particularly in terms of performance, scalability, and availability.</li>
+            <li><strong>Global Database:</strong> Know how Aurora Global Database enables cross-region replication and disaster recovery.</li>
+            <li><strong>Backup and Restore:</strong> Be familiar with Aurora’s backup and restore capabilities, including continuous backups and point-in-time recovery.</li>
+            <li><strong>Scaling:</strong> Understand how Aurora scales storage and read replicas independently to handle varying workloads.</li>
+            <li><strong>Compatibility:</strong> Remember that Aurora is compatible with MySQL and PostgreSQL, making it easy to migrate existing applications.</li>
+            <li><strong>Pricing:</strong> Be aware of Aurora’s pricing model, which includes charges for database instances, storage, I/O operations, and cross-region replication for Global Database.</li>
+            <li><strong>Use Cases:</strong> Review the common use cases for Aurora, especially in scenarios that require high availability, disaster recovery, and high performance.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
