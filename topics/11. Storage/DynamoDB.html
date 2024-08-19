@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon DynamoDB - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1976d2;
+        }
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>Amazon DynamoDB</h1>
+        <p>Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. It is designed for applications that require consistent, single-digit millisecond response times at any scale. DynamoDB supports both document and key-value store models.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Managed Service:</strong> DynamoDB is fully managed by AWS, handling tasks like provisioning, patching, and scaling, allowing you to focus on your application.</li>
+            <li><strong>Scalability:</strong> DynamoDB automatically scales up or down to handle capacity and maintain performance as your application's traffic fluctuates.</li>
+            <li><strong>Global Tables:</strong> DynamoDB supports multi-region, fully replicated tables, allowing for low-latency access to data globally.</li>
+            <li><strong>Fine-Grained Access Control:</strong> Integrated with AWS Identity and Access Management (IAM), you can define who has access to specific data within your DynamoDB tables.</li>
+            <li><strong>Streams:</strong> DynamoDB Streams capture changes in your table, enabling real-time processing, analytics, or event-driven architectures.</li>
+            <li><strong>On-Demand Mode:</strong> DynamoDB offers on-demand capacity mode, which automatically accommodates workloads as they scale up or down.</li>
+        </ul>
+
+        <h2>Common Use Cases</h2>
+        <ul>
+            <li><strong>Web Applications:</strong> DynamoDB is ideal for handling high-traffic web applications that require quick, predictable response times.</li>
+            <li><strong>Mobile Backends:</strong> Used as a backend for mobile applications, DynamoDB can store user profiles, game states, and other semi-structured data.</li>
+            <li><strong>IoT Applications:</strong> DynamoDB can manage massive amounts of IoT data due to its scalable, low-latency design.</li>
+            <li><strong>Gaming:</strong> Games that require a highly available and scalable database to manage user data and game states benefit from DynamoDB's performance.</li>
+            <li><strong>Serverless Architectures:</strong> DynamoDB integrates well with AWS Lambda, allowing for the creation of serverless applications that are highly scalable and cost-efficient.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates the architecture of Amazon DynamoDB:</p>
+        <img src="https://d2908q01vomqb2.cloudfront.net/887309d048beef83ad3eabf2a79a64a389ab1c9f/2021/05/06/DDB-Design-patterns-v1.3.jpg" alt="Amazon DynamoDB Architecture Diagram">
+        <ul>
+            <li><strong>Storage:</strong> DynamoDB stores data across multiple Availability Zones, ensuring durability and high availability.</li>
+            <li><strong>Partitions:</strong> Data is automatically partitioned across multiple servers based on partition keys, enabling scalable performance.</li>
+            <li><strong>Indexing:</strong> DynamoDB supports both primary (hash key and sort key) and secondary indexes, providing flexibility in how data is queried.</li>
+            <li><strong>Streams:</strong> DynamoDB Streams allow applications to react to changes in data, enabling use cases like real-time analytics and triggering workflows.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>Amazon DynamoDB integrates with several AWS services to provide a comprehensive solution:</p>
+        <ul>
+            <li><strong>AWS Lambda:</strong> Build event-driven applications by triggering Lambda functions in response to changes in DynamoDB Streams.</li>
+            <li><strong>Amazon CloudWatch:</strong> Monitor the performance and operational health of DynamoDB tables using CloudWatch metrics and alarms.</li>
+            <li><strong>Amazon S3:</strong> Use S3 to back up DynamoDB tables or to move cold data out of DynamoDB for long-term storage.</li>
+            <li><strong>AWS Glue:</strong> Use AWS Glue to extract, transform, and load (ETL) data from DynamoDB into other data stores for analytics.</li>
+            <li><strong>Amazon Kinesis Data Streams:</strong> Combine DynamoDB with Kinesis to analyze and process streaming data in real-time.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Consistency Models:</strong> Understand the difference between eventually consistent reads and strongly consistent reads in DynamoDB.</li>
+            <li><strong>Capacity Modes:</strong> Be familiar with the two capacity modes: provisioned and on-demand, and know when to use each.</li>
+            <li><strong>Global Tables:</strong> Know how DynamoDB Global Tables provide multi-region, fully replicated databases with low-latency access.</li>
+            <li><strong>Indexes:</strong> Remember the differences between primary keys, local secondary indexes (LSI), and global secondary indexes (GSI).</li>
+            <li><strong>Streams:</strong> Understand how DynamoDB Streams work and how they can be used to trigger events or replicate data.</li>
+            <li><strong>Integration:</strong> Review how DynamoDB integrates with other AWS services, especially AWS Lambda and Amazon S3, for event-driven architectures and data backup.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
