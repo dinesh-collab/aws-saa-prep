@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon S3 Glacier - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1b73e8;
+        }
+        h2 {
+            color: #1b73e8;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1b73e8;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #155ab6;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>Amazon S3 Glacier</h1>
+        <p>Amazon S3 Glacier is a secure, durable, and low-cost storage service for data archiving and long-term backup. It is designed to provide you with a solution for data that is infrequently accessed and stored for months, years, or decades. With S3 Glacier, customers can reliably store large or small amounts of data at a very low cost.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Low-Cost Storage:</strong> S3 Glacier offers very low-cost storage, making it ideal for data that is infrequently accessed.</li>
+            <li><strong>Durability:</strong> S3 Glacier is designed for 99.999999999% (11 9's) durability, with data automatically replicated across multiple Availability Zones.</li>
+            <li><strong>Data Retrieval Options:</strong> S3 Glacier offers three retrieval options—Expedited, Standard, and Bulk—to balance cost and retrieval speed.</li>
+            <li><strong>Security:</strong> S3 Glacier supports encryption of data at rest and in transit, access control using IAM policies, and audit logs via AWS CloudTrail.</li>
+            <li><strong>Flexible Management:</strong> S3 Glacier integrates with S3 Lifecycle policies to automatically transition objects from S3 to S3 Glacier based on predefined rules.</li>
+            <li><strong>Vault Lock:</strong> The Vault Lock feature allows you to easily deploy and enforce compliance controls that meet even the most stringent regulatory requirements.</li>
+            <li><strong>Integration with AWS Services:</strong> S3 Glacier integrates with various AWS services such as AWS Lambda, AWS DataSync, and AWS Storage Gateway for seamless data management and processing.</li>
+        </ul>
+
+        <h2>Common Use Cases</h2>
+        <ul>
+            <li><strong>Data Archiving:</strong> Ideal for archiving data that is infrequently accessed, such as compliance records, raw data for analytics, and backups.</li>
+            <li><strong>Long-Term Backup:</strong> S3 Glacier is used for long-term backup of mission-critical data, offering durable storage at a fraction of the cost of traditional on-premises solutions.</li>
+            <li><strong>Compliance Storage:</strong> Organizations use S3 Glacier for storing compliance data, with features like Vault Lock providing added security and governance controls.</li>
+            <li><strong>Digital Preservation:</strong> Suitable for the long-term preservation of digital media, such as photos, videos, and other important files that need to be retained indefinitely.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates the architecture of Amazon S3 Glacier:</p>
+        <img src="https://docs.aws.amazon.com/images/solutions/latest/data-transfer-from-amazon-s3-glacier-vaults-to-amazon-s3/images/architecture-diagram.png" alt="Amazon S3 Glacier Architecture Diagram">
+        <ul>
+            <li><strong>Vaults:</strong> Vaults are containers in S3 Glacier used to store archives (data). Each vault can be configured with policies to control access and retrieval settings.</li>
+            <li><strong>Archives:</strong> An archive is any data, such as a photo, video, or document, that you store in a vault. Each archive is assigned a unique ID within the vault.</li>
+            <li><strong>Data Retrieval:</strong> S3 Glacier offers three retrieval options: Expedited (1-5 minutes), Standard (3-5 hours), and Bulk (5-12 hours).</li>
+            <li><strong>Access Control:</strong> Access to S3 Glacier resources is managed through IAM policies, which allow you to control who can create, access, and manage your vaults and archives.</li>
+            <li><strong>Data Encryption:</strong> S3 Glacier encrypts data at rest by default, and you can configure it to use AWS KMS keys for additional security.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>Amazon S3 Glacier integrates with various AWS services to enhance its functionality and streamline data management:</p>
+        <ul>
+            <li><strong>AWS S3:</strong> Use S3 Lifecycle policies to automatically transition data from S3 Standard or S3-IA to S3 Glacier for long-term storage.</li>
+            <li><strong>AWS DataSync:</strong> Automate and accelerate moving data from on-premises storage to S3 Glacier using AWS DataSync.</li>
+            <li><strong>AWS Lambda:</strong> Trigger serverless functions when data is retrieved from S3 Glacier, enabling automated processing or alerts.</li>
+            <li><strong>AWS Storage Gateway:</strong> Integrate S3 Glacier with on-premises storage through AWS Storage Gateway, facilitating seamless data archiving.</li>
+            <li><strong>AWS Backup:</strong> Manage and automate backups across AWS services, including S3 Glacier, using AWS Backup.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Data Retrieval Options:</strong> Understand the three retrieval options in S3 Glacier:
+                <ul>
+                    <li><strong>Expedited:</strong> Fastest retrieval, suitable for urgent data needs, with retrieval times of 1-5 minutes.</li>
+                    <li><strong>Standard:</strong> Cost-effective retrieval for regular use cases, with retrieval times of 3-5 hours.</li>
+                    <li><strong>Bulk:</strong> Lowest cost retrieval option, suitable for large data sets with retrieval times of 5-12 hours.</li>
+                </ul>
+            </li>
+            <li><strong>Vault Lock:</strong> Know the importance of Vault Lock:
+                <ul>
+                    <li>Enforces compliance controls on vaults, such as WORM (Write Once Read Many) policies.</li>
+                    <li>Once a Vault Lock policy is set, it cannot be changed or deleted, ensuring data integrity and compliance.</li>
+                </ul>
+            </li>
+            <li><strong>Data Encryption:</strong> Be familiar with encryption in S3 Glacier:
+                <ul>
+                    <li>Data is encrypted at rest by default using AES-256 encryption.</li>
+                    <li>Optionally, use AWS KMS to manage encryption keys for additional security.</li>
+                </ul>
+            </li>
+            <li><strong>S3 Lifecycle Integration:</strong> Understand how S3 Glacier integrates with S3 Lifecycle policies:
+                <ul>
+                    <li>Automatically transition objects from S3 Standard, S3-IA, or S3 One Zone-IA to S3 Glacier based on lifecycle rules.</li>
+                    <li>Reduces storage costs by moving infrequently accessed data to lower-cost Glacier storage.</li>
+                </ul>
+            </li>
+            <li><strong>Use Cases:</strong> Be aware of common use cases for S3 Glacier:
+                <ul>
+                    <li>Archiving compliance records, raw data, and backups for long-term storage.</li>
+                    <li>Digital preservation of important files like photos, videos, and documents.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
