@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial, scale=1.0">
+    <title>AWS Key Management Service (KMS) - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1b73e8;
+        }
+        h2 {
+            color: #1b73e8;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1b73e8;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #155ab6;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Key Management Service (KMS)</h1>
+        <p>AWS Key Management Service (KMS) is a managed service that simplifies the creation and control of encryption keys used to encrypt your data. With KMS, you can centrally manage and protect your keys, integrate them with various AWS services, and control access to them.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Managed Encryption Keys:</strong> Simplifies the creation and management of encryption keys. AWS KMS handles key rotation, lifecycle management, and access control.</li>
+            <li><strong>Integration with AWS Services:</strong> Seamlessly integrates with various AWS services, including S3, EBS, RDS, and Lambda, to provide encryption capabilities for your data.</li>
+            <li><strong>Centralized Key Management:</strong> Provides a central location to manage encryption keys and control access, including key policies and IAM roles.</li>
+            <li><strong>Automatic Key Rotation:</strong> Supports automatic key rotation to enhance security by periodically rotating keys without manual intervention.</li>
+            <li><strong>Audit and Compliance:</strong> Integration with AWS CloudTrail for logging key usage and access. Helps meet compliance requirements by providing detailed audit logs.</li>
+            <li><strong>Customer-Managed Keys:</strong> Allows you to create and manage your own encryption keys, including custom key policies and usage permissions.</li>
+        </ul>
+
+        <h2>Common Use Cases</h2>
+        <ul>
+            <li><strong>Data Encryption:</strong> Encrypt sensitive data at rest and in transit using AWS KMS to protect against unauthorized access.</li>
+            <li><strong>Compliance Requirements:</strong> Meet regulatory and compliance requirements for data encryption by using AWS KMS to manage encryption keys securely.</li>
+            <li><strong>Application Integration:</strong> Integrate AWS KMS with your applications to secure data stored in AWS services like S3, EBS, and RDS.</li>
+            <li><strong>Secure Key Management:</strong> Use KMS to manage and protect keys for applications that require encryption, such as customer data or financial records.</li>
+            <li><strong>Auditing and Monitoring:</strong> Leverage integration with AWS CloudTrail to monitor and audit key usage for compliance and security purposes.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates the architecture of AWS KMS:</p>
+        <img src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2021/03/09/Demystifying-KMS-keys-2021-2.png" alt="AWS Key Management Service Architecture Diagram">
+        <ul>
+            <li><strong>Key Creation:</strong> AWS KMS allows you to create and manage cryptographic keys used for data encryption.</li>
+            <li><strong>Key Storage:</strong> Keys are stored securely in the AWS KMS service and are protected with multiple layers of security.</li>
+            <li><strong>Key Rotation:</strong> Automatic key rotation can be configured to enhance security by periodically updating encryption keys.</li>
+            <li><strong>Access Control:</strong> Key policies and IAM roles are used to control access to keys and their usage across AWS services.</li>
+            <li><strong>Integration with Services:</strong> AWS KMS integrates with various AWS services to provide encryption capabilities for data stored or processed by these services.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS KMS integrates with a range of AWS services to provide encryption and key management capabilities:</p>
+        <ul>
+            <li><strong>AWS S3:</strong> Use KMS to encrypt objects stored in S3 buckets and manage access to those objects through key policies.</li>
+            <li><strong>AWS EBS:</strong> Encrypt Amazon EBS volumes with KMS keys to protect data at rest in your EC2 instances.</li>
+            <li><strong>AWS RDS:</strong> Encrypt databases and backups in Amazon RDS using KMS to secure your relational data.</li>
+            <li><strong>AWS Lambda:</strong> Integrate KMS with AWS Lambda functions to manage encryption keys for data processed by your serverless functions.</li>
+            <li><strong>AWS CloudTrail:</strong> Use CloudTrail to log and monitor KMS key usage, providing detailed audit trails for compliance and security.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Encryption Keys:</strong> AWS KMS manages encryption keys used for protecting data. Understand how to create, rotate, and manage these keys.</li>
+            <li><strong>Key Policies and IAM Roles:</strong> Be familiar with how to configure key policies and IAM roles to control access to encryption keys.</li>
+            <li><strong>Automatic Key Rotation:</strong> Know how automatic key rotation works and its role in maintaining key security.</li>
+            <li><strong>Integration with AWS Services:</strong> Understand how KMS integrates with AWS services like S3, EBS, and RDS to provide encryption capabilities.</li>
+            <li><strong>Compliance and Auditing:</strong> Be aware of how KMS helps meet compliance requirements and how to use CloudTrail for auditing key usage.</li>
+            <li><strong>Customer-Managed Keys:</strong> Know how to manage your own encryption keys, including setting up key policies and usage permissions.</li>
+            <li><strong>Encryption Context:</strong> Understand the concept of encryption context and how it is used to provide additional security and context to your encrypted data.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
