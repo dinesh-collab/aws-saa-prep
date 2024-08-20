@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Systems Manager Parameter Store - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1b73e8;
+        }
+        h2 {
+            color: #1b73e8;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1b73e8;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #155ab6;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Systems Manager Parameter Store</h1>
+        <p>AWS Systems Manager Parameter Store is a managed service that provides a centralized location to manage your configuration data, secrets, and parameters. It helps you store, retrieve, and manage configuration data such as application settings, database connection strings, and secrets used by your applications and services.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Secure Storage:</strong> Store configuration data and secrets securely using encryption with AWS KMS. Support for secrets management with automatic rotation.</li>
+            <li><strong>Parameter Types:</strong> Support for different parameter types including String, StringList, and SecureString to accommodate various data storage needs.</li>
+            <li><strong>Versioning:</strong> Maintain different versions of parameters, allowing you to manage changes and roll back to previous versions if needed.</li>
+            <li><strong>Access Control:</strong> Use AWS IAM policies to control access to parameters and secure sensitive information.</li>
+            <li><strong>Integration:</strong> Easily integrate with other AWS services such as EC2, Lambda, and ECS for seamless parameter retrieval and usage in your applications.</li>
+            <li><strong>Parameter Hierarchy:</strong> Organize parameters into a hierarchical structure for better management and easier retrieval.</li>
+        </ul>
+
+        <h2>Common Use Cases</h2>
+        <ul>
+            <li><strong>Application Configuration:</strong> Store and manage application settings such as feature flags, database connection strings, and API keys.</li>
+            <li><strong>Secrets Management:</strong> Securely store sensitive information like passwords and API keys with encryption and automatic rotation.</li>
+            <li><strong>Environment Management:</strong> Use parameter hierarchies to manage configuration data across different environments (e.g., development, staging, production).</li>
+            <li><strong>Dynamic Configuration:</strong> Retrieve and use configuration data dynamically in your applications without hardcoding values in your code.</li>
+            <li><strong>Automated Deployments:</strong> Integrate with deployment pipelines to manage and update application configurations during deployment processes.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates the architecture of AWS Systems Manager Parameter Store:</p>
+        <img src="https://awswith.net/wp-content/uploads/2022/03/parameter-store-l-1.png" alt="AWS Systems Manager Parameter Store Architecture Diagram">
+        <ul>
+            <li><strong>Parameter Storage:</strong> Parameters are stored securely and can be accessed using the AWS SDK or AWS CLI.</li>
+            <li><strong>Encryption:</strong> Parameters, especially SecureString parameters, are encrypted using AWS KMS for secure storage.</li>
+            <li><strong>Access Control:</strong> IAM policies control access to parameters and ensure that only authorized users and services can retrieve or modify them.</li>
+            <li><strong>Version Management:</strong> Parameters are versioned, allowing you to track changes and revert to previous versions as needed.</li>
+            <li><strong>Integration:</strong> AWS Systems Manager Parameter Store integrates with other AWS services for seamless use of parameters in applications and deployment processes.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Systems Manager Parameter Store integrates with several AWS services to enhance its functionality:</p>
+        <ul>
+            <li><strong>AWS Lambda:</strong> Retrieve parameters in Lambda functions to use configuration data or secrets securely in serverless applications.</li>
+            <li><strong>AWS EC2:</strong> Use EC2 instance roles and IAM policies to securely access parameters from within EC2 instances.</li>
+            <li><strong>AWS ECS:</strong> Configure ECS tasks to retrieve parameters for containerized applications during deployment and runtime.</li>
+            <li><strong>AWS CloudFormation:</strong> Use Parameter Store parameters in CloudFormation templates to dynamically manage configuration settings during stack creation or updates.</li>
+            <li><strong>AWS CodePipeline:</strong> Integrate with CodePipeline to manage and update application configurations as part of your CI/CD processes.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Parameter Types:</strong> Understand the different parameter types (String, StringList, SecureString) and their use cases.</li>
+            <li><strong>Encryption:</strong> Know how encryption works for SecureString parameters using AWS KMS and the benefits of securing sensitive data.</li>
+            <li><strong>Versioning:</strong> Be familiar with parameter versioning and how to manage and roll back to previous versions of parameters.</li>
+            <li><strong>Access Control:</strong> Understand how to use IAM policies to control access to parameters and secure configuration data.</li>
+            <li><strong>Integration:</strong> Remember how Parameter Store integrates with AWS services like Lambda, EC2, and ECS for dynamic configuration management.</li>
+            <li><strong>Hierarchical Structure:</strong> Know how to organize parameters into a hierarchical structure to manage and retrieve configuration data effectively.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
