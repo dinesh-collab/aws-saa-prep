@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Inspector - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1b73e8;
+        }
+        h2 {
+            color: #1b73e8;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1b73e8;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #155ab6;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Inspector</h1>
+        <p>AWS Inspector is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS. It performs security assessments of your AWS resources and provides detailed findings, including recommended remediation actions.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Automated Security Assessments:</strong> Conducts automated security assessments of your AWS resources, including EC2 instances and containerized applications.</li>
+            <li><strong>Pre-Built Assessment Templates:</strong> Utilizes predefined assessment templates based on best practices and security standards to evaluate the security posture of your environment.</li>
+            <li><strong>Detailed Findings:</strong> Provides detailed findings and recommendations for remediation, helping you address security vulnerabilities and misconfigurations.</li>
+            <li><strong>Integration with AWS Services:</strong> Integrates with AWS CloudTrail, AWS Security Hub, and AWS Config to provide comprehensive security insights and streamline response processes.</li>
+            <li><strong>Customizable Assessments:</strong> Allows you to create custom assessment templates tailored to specific security requirements or compliance standards.</li>
+            <li><strong>Continuous Monitoring:</strong> Supports continuous security monitoring by running assessments on a regular schedule or on-demand.</li>
+        </ul>
+
+        <h2>Common Use Cases</h2>
+        <ul>
+            <li><strong>Security Compliance:</strong> Use Inspector to ensure compliance with security best practices and industry standards, such as PCI-DSS, HIPAA, and GDPR.</li>
+            <li><strong>Vulnerability Management:</strong> Identify and remediate security vulnerabilities in your AWS resources, including EC2 instances and container images.</li>
+            <li><strong>Configuration Review:</strong> Assess the configuration of your AWS resources to ensure they adhere to security best practices and organizational policies.</li>
+            <li><strong>Continuous Security Monitoring:</strong> Run regular or on-demand assessments to maintain a secure environment and address emerging security issues.</li>
+            <li><strong>Integration with Incident Response:</strong> Integrate with AWS Security Hub and other AWS services to streamline incident response and remediation processes based on assessment findings.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates the architecture of AWS Inspector:</p>
+        <img src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2023/07/07/img1_featured.jpg" alt="AWS Inspector Architecture Diagram">
+        <ul>
+            <li><strong>Assessment Templates:</strong> Inspector uses predefined or custom assessment templates to evaluate the security posture of AWS resources.</li>
+            <li><strong>Assessment Targets:</strong> Define the resources to be assessed, including EC2 instances, container images, and network configurations.</li>
+            <li><strong>Finding Reports:</strong> Inspector generates detailed findings and recommendations for remediation, which are accessible through the AWS Management Console or API.</li>
+            <li><strong>Integration with AWS Services:</strong> Integrates with AWS Security Hub and CloudTrail for centralized security management and event logging.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Inspector integrates with various AWS services to enhance security assessments and streamline incident response:</p>
+        <ul>
+            <li><strong>AWS Security Hub:</strong> Aggregates Inspector findings with other security data for comprehensive security management and compliance monitoring.</li>
+            <li><strong>AWS CloudTrail:</strong> Provides detailed logging of Inspector assessment activities and helps with auditing and compliance reporting.</li>
+            <li><strong>AWS Config:</strong> Monitors configuration changes and integrates with Inspector to ensure that configurations comply with security best practices.</li>
+            <li><strong>AWS Lambda:</strong> Automate responses to Inspector findings, such as triggering remediation actions or notifications based on assessment results.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Automated Assessments:</strong> AWS Inspector performs automated security assessments of your AWS resources, including EC2 instances and container images. Understand the role of automated assessments in maintaining security and compliance.</li>
+            <li><strong>Assessment Templates:</strong> Be familiar with the predefined assessment templates provided by Inspector, which are based on best practices and security standards. Also, know how to create and use custom templates for specific security needs.</li>
+            <li><strong>Finding Reports:</strong> AWS Inspector generates detailed findings and recommendations for remediation. Understand how to interpret these findings and use them to improve your security posture.</li>
+            <li><strong>Integration with AWS Services:</strong> Inspector integrates with AWS Security Hub, CloudTrail, and AWS Config to provide comprehensive security insights and streamline incident response. Know how these integrations enhance security management.</li>
+            <li><strong>Continuous Monitoring:</strong> AWS Inspector supports continuous monitoring by allowing you to run assessments on a regular schedule or on-demand. Remember the importance of regular assessments in maintaining a secure environment.</li>
+            <li><strong>Compliance Use Cases:</strong> AWS Inspector helps meet various compliance requirements, including PCI-DSS, HIPAA, and GDPR. Be aware of how Inspector can be used to ensure compliance with these standards.</li>
+            <li><strong>Custom Assessments:</strong> Know how to create and use custom assessment templates tailored to specific security requirements or compliance standards.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
