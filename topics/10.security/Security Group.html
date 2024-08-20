@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Security Groups - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1b73e8;
+        }
+        h2 {
+            color: #1b73e8;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1b73e8;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #155ab6;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Security Groups</h1>
+        <p>AWS Security Groups are virtual firewalls that control inbound and outbound traffic to AWS resources, such as EC2 instances. They provide a way to manage access to resources by defining rules that allow or deny traffic based on criteria such as IP address, protocol, and port number.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Stateful Filtering:</strong> Security Groups are stateful, meaning that if you allow an inbound request from a specific IP, the response is automatically allowed, regardless of outbound rules.</li>
+            <li><strong>Rules-Based Control:</strong> Define rules to allow or deny traffic based on source IP, destination IP, port, and protocol. Each Security Group can have multiple inbound and outbound rules.</li>
+            <li><strong>Apply to Multiple Resources:</strong> Security Groups can be applied to multiple EC2 instances, ensuring consistent security configurations across your infrastructure.</li>
+            <li><strong>Default Security Group:</strong> Each VPC comes with a default Security Group that allows all inbound and outbound traffic unless modified.</li>
+            <li><strong>Dynamic Updates:</strong> Changes to Security Group rules are automatically applied to all associated resources, providing flexibility in managing access control.</li>
+        </ul>
+
+        <h2>Common Use Cases</h2>
+        <ul>
+            <li><strong>Application Segmentation:</strong> Use Security Groups to segment applications into different tiers (e.g., web servers, application servers, database servers) and control traffic flow between them.</li>
+            <li><strong>Restricted Access:</strong> Restrict access to specific resources, such as databases, by allowing only traffic from trusted IP addresses or other Security Groups.</li>
+            <li><strong>Compliance and Security:</strong> Implement security controls to meet compliance requirements by defining precise access rules for sensitive resources.</li>
+            <li><strong>Testing and Development:</strong> Use Security Groups to create isolated environments for testing and development, ensuring that only authorized traffic can access your instances.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates how AWS Security Groups operate within a VPC:</p>
+        <img src="https://www.datocms-assets.com/75231/1700199439-aws-security-group-overview.png" alt="AWS Security Groups Architecture Diagram">
+        <ul>
+            <li><strong>Security Group Rules:</strong> Define inbound and outbound rules that control traffic to and from instances.</li>
+            <li><strong>Instance Association:</strong> Attach Security Groups to instances to enforce the defined rules.</li>
+            <li><strong>Traffic Filtering:</strong> Security Groups filter traffic based on the rules applied, allowing or denying traffic as specified.</li>
+            <li><strong>Dynamic Updates:</strong> Changes to Security Group rules are automatically reflected in associated instances.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Security Groups integrate with various AWS services to provide comprehensive security controls:</p>
+        <ul>
+            <li><strong>AWS EC2:</strong> Control traffic to and from EC2 instances using Security Groups.</li>
+            <li><strong>AWS Elastic Load Balancer (ELB):</strong> Apply Security Groups to ELB to manage access to your load balancers and backend instances.</li>
+            <li><strong>AWS RDS:</strong> Use Security Groups to control access to RDS instances, ensuring only authorized traffic can reach your databases.</li>
+            <li><strong>AWS Lambda:</strong> Apply Security Groups to Lambda functions within a VPC to manage access to resources.</li>
+            <li><strong>AWS Elastic Beanstalk:</strong> Configure Security Groups for Elastic Beanstalk environments to manage access to your application instances.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Stateful vs. Stateless:</strong> Understand the difference between stateful Security Groups and stateless Network ACLs. Security Groups are stateful, meaning responses to allowed inbound traffic are automatically allowed.</li>
+            <li><strong>Rule Management:</strong> Know how to configure inbound and outbound rules, and how to manage multiple rules within a Security Group.</li>
+            <li><strong>Default Security Group:</strong> Be familiar with the default Security Group settings and how they apply to instances in a new VPC.</li>
+            <li><strong>Resource Association:</strong> Understand how to associate Security Groups with different AWS resources, including EC2 instances, ELB, RDS, and Lambda functions.</li>
+            <li><strong>Traffic Flow Control:</strong> Review how Security Groups manage traffic flow between different tiers of an application and across multiple resources.</li>
+            <li><strong>Security Group Limits:</strong> Be aware of the default limits for Security Groups, including the maximum number of rules and Security Groups per instance.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
