@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS GuardDuty - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1b73e8;
+        }
+        h2 {
+            color: #1b73e8;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1b73e8;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #155ab6;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS GuardDuty</h1>
+        <p>AWS GuardDuty is a threat detection service that continuously monitors for malicious activity and unauthorized behavior to protect your AWS accounts and workloads. It uses machine learning, anomaly detection, and integrated threat intelligence to identify and prioritize potential security threats.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Continuous Monitoring:</strong> GuardDuty continuously monitors AWS accounts, network traffic, and cloud workloads for potential security threats.</li>
+            <li><strong>Threat Intelligence Integration:</strong> Leverages threat intelligence feeds from AWS and third-party sources to detect known malicious IPs, domains, and patterns.</li>
+            <li><strong>Anomaly Detection:</strong> Uses machine learning to establish a baseline of normal behavior and identifies anomalies that may indicate security threats.</li>
+            <li><strong>Automated Remediation:</strong> Integrates with AWS Lambda and other services to automatically respond to detected threats, such as isolating compromised instances.</li>
+            <li><strong>Multi-Account Support:</strong> Provides centralized threat detection across multiple AWS accounts within an organization.</li>
+            <li><strong>Scalable and Cost-Effective:</strong> Scales automatically with your AWS environment and offers cost-effective threat detection based on usage.</li>
+        </ul>
+
+        <h2>Common Use Cases</h2>
+        <ul>
+            <li><strong>Cloud Security Monitoring:</strong> Continuously monitor AWS workloads and accounts for potential security threats, ensuring real-time protection.</li>
+            <li><strong>Threat Detection:</strong> Detect and prioritize potential threats, such as compromised EC2 instances or unusual API calls, based on integrated threat intelligence and anomaly detection.</li>
+            <li><strong>Compliance and Governance:</strong> Use GuardDuty to meet security compliance requirements by continuously monitoring and reporting on threats in your AWS environment.</li>
+            <li><strong>Automated Incident Response:</strong> Integrate GuardDuty with AWS Lambda to automate responses to detected threats, such as terminating compromised instances or revoking access.</li>
+            <li><strong>Centralized Threat Detection:</strong> Manage threat detection across multiple AWS accounts, providing a single view of security across your organization.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates the architecture of AWS GuardDuty:</p>
+        <img src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2022/06/28/Figure-1.-Current-high-level-solution-architecture-for-the-ALLFINANZ-solution-1024x793.png" alt="AWS GuardDuty Architecture Diagram">
+        <ul>
+            <li><strong>Data Sources:</strong> GuardDuty analyzes data from AWS CloudTrail, VPC Flow Logs, and DNS logs to detect potential threats.</li>
+            <li><strong>Threat Intelligence Integration:</strong> GuardDuty integrates with AWS and third-party threat intelligence sources to detect known malicious activities.</li>
+            <li><strong>Machine Learning Models:</strong> Uses machine learning models to identify anomalies in account behavior that may indicate a security threat.</li>
+            <li><strong>Findings and Alerts:</strong> GuardDuty generates findings and alerts for detected threats, which can be sent to AWS CloudWatch, SNS, or other monitoring tools.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS GuardDuty integrates seamlessly with various AWS services to enhance security and streamline threat detection:</p>
+        <ul>
+            <li><strong>AWS Lambda:</strong> Automate responses to GuardDuty findings, such as isolating compromised instances or rotating credentials.</li>
+            <li><strong>AWS Security Hub:</strong> Aggregate and analyze GuardDuty findings alongside data from other AWS security services for centralized security management.</li>
+            <li><strong>AWS CloudWatch:</strong> Use CloudWatch to monitor and respond to GuardDuty findings in real-time, creating alarms and triggers for automated actions.</li>
+            <li><strong>AWS Config:</strong> Monitor compliance with security best practices by integrating GuardDuty findings with AWS Config rules.</li>
+            <li><strong>Amazon S3:</strong> Store GuardDuty findings in S3 for long-term analysis and auditing purposes.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Continuous Threat Detection:</strong> Remember that AWS GuardDuty continuously monitors AWS CloudTrail, VPC Flow Logs, and DNS logs for potential security threats.</li>
+            <li><strong>Data Sources:</strong> Be aware that GuardDuty analyzes three primary data sources: CloudTrail logs, VPC Flow Logs, and DNS logs. Understand the significance of these logs in detecting different types of threats.</li>
+            <li><strong>Threat Intelligence Integration:</strong> GuardDuty integrates with AWS and third-party threat intelligence to detect known malicious IPs and domains. It's important to know that this integration helps in identifying and blocking known threats.</li>
+            <li><strong>Findings and Alerts:</strong> GuardDuty generates findings categorized as low, medium, or high severity. Know how these findings are used to prioritize incident response.</li>
+            <li><strong>Anomaly Detection:</strong> Understand that GuardDuty uses machine learning to detect anomalies in your AWS environment, identifying activities that deviate from normal behavior and could indicate potential security issues.</li>
+            <li><strong>Automated Response:</strong> Remember that you can automate responses to GuardDuty findings using AWS Lambda. For example, you could automatically isolate a compromised instance based on GuardDuty findings.</li>
+            <li><strong>Multi-Account Management:</strong> GuardDuty supports centralized threat detection across multiple AWS accounts, which is particularly useful for organizations using AWS Organizations.</li>
+            <li><strong>Cost-Effective:</strong> Know that GuardDuty is priced based on the volume of analyzed logs, making it scalable and cost-effective for environments of all sizes.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
