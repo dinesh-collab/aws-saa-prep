@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Firewall Manager - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1b73e8;
+        }
+        h2 {
+            color: #1b73e8;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1b73e8;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #155ab6;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Firewall Manager</h1>
+        <p>AWS Firewall Manager is a security management service that allows you to centrally configure and manage firewall rules across your accounts and applications in AWS Organizations. It simplifies the administration of security policies, helping ensure consistent protection across your AWS environment.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Centralized Security Management:</strong> Manage AWS WAF rules, AWS Shield Advanced protections, and VPC security group policies across multiple accounts from a single place.</li>
+            <li><strong>Automated Policy Enforcement:</strong> Automatically applies security rules and policies across all new and existing resources as they are created, ensuring consistent security across your AWS environment.</li>
+            <li><strong>Compliance Reporting:</strong> Provides visibility into policy compliance, helping ensure that all your resources adhere to your organization’s security policies.</li>
+            <li><strong>Cross-Account Protection:</strong> Allows you to apply protections, such as DDoS protections and web application firewall rules, across all accounts in an AWS Organization.</li>
+            <li><strong>Third-Party Integration:</strong> Integrates with third-party security services for enhanced security management and visibility.</li>
+            <li><strong>Customizable Policies:</strong> Create custom security policies tailored to the specific needs of your applications, services, and organizational requirements.</li>
+        </ul>
+
+        <h2>Common Use Cases</h2>
+        <ul>
+            <li><strong>Organization-Wide Security Policies:</strong> Implement organization-wide security rules that apply to all accounts and resources, ensuring uniform protection.</li>
+            <li><strong>Security Automation:</strong> Automate the application of security policies to new resources as they are created, reducing manual configuration efforts and minimizing human error.</li>
+            <li><strong>DDoS Protection:</strong> Use Firewall Manager in conjunction with AWS Shield Advanced to provide organization-wide DDoS protection.</li>
+            <li><strong>Web Application Security:</strong> Centrally manage AWS WAF rules to protect web applications from common threats like SQL injection and cross-site scripting.</li>
+            <li><strong>Compliance Management:</strong> Monitor and report on security policy compliance across all your AWS accounts, helping meet regulatory requirements.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates the architecture of AWS Firewall Manager:</p>
+        <img src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2023/09/08/Hybrid-WAF-Page-1-1024x696.jpg" alt="AWS Firewall Manager Architecture Diagram">
+        <ul>
+            <li><strong>Policy Management:</strong> Create and manage security policies in Firewall Manager, which automatically enforces them across your organization.</li>
+            <li><strong>Cross-Account Enforcement:</strong> Firewall Manager applies security policies across all accounts in your AWS Organization, ensuring consistent protection.</li>
+            <li><strong>Integration with AWS Services:</strong> Firewall Manager integrates with services like AWS WAF, AWS Shield Advanced, and VPC security groups for comprehensive security management.</li>
+            <li><strong>Monitoring and Compliance:</strong> Continuously monitors policy compliance and provides detailed reporting on security postures across your environment.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Firewall Manager integrates seamlessly with various AWS services to enhance protection and streamline security management:</p>
+        <ul>
+            <li><strong>AWS WAF:</strong> Centrally manage AWS WAF rules across multiple accounts, protecting web applications from common threats.</li>
+            <li><strong>AWS Shield Advanced:</strong> Use Firewall Manager to manage and apply DDoS protections across all accounts in your organization.</li>
+            <li><strong>Amazon VPC:</strong> Automate the management of VPC security group rules to ensure consistent security configurations across your AWS environment.</li>
+            <li><strong>AWS Organizations:</strong> Firewall Manager works with AWS Organizations to apply security policies across all accounts, ensuring organization-wide protection.</li>
+            <li><strong>AWS Security Hub:</strong> Integrates with Security Hub for centralized security management and compliance monitoring.</li>
+            <li><strong>Amazon CloudFront:</strong> Protects CloudFront distributions by applying WAF rules and Shield protections via Firewall Manager policies.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Policy Management:</strong> Understand how AWS Firewall Manager allows for centralized security policy management across an AWS Organization.</li>
+            <li><strong>Automatic Policy Enforcement:</strong> Remember that Firewall Manager automatically applies security policies to new resources, ensuring consistent protection.</li>
+            <li><strong>Integration with AWS WAF and Shield Advanced:</strong> Know how Firewall Manager integrates with these services to provide comprehensive protection.</li>
+            <li><strong>Cross-Account Security:</strong> Understand how Firewall Manager enforces security policies across multiple AWS accounts within an organization.</li>
+            <li><strong>Compliance Monitoring:</strong> Be aware of Firewall Manager's compliance monitoring capabilities, which help ensure that all resources adhere to security policies.</li>
+            <li><strong>Third-Party Integration:</strong> Remember that Firewall Manager can integrate with third-party security services for enhanced management.</li>
+            <li><strong>Common Use Cases:</strong> Be familiar with the typical scenarios where AWS Firewall Manager is used, such as organization-wide security policy enforcement and automated security rule application.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
