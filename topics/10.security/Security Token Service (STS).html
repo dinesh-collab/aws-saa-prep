@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Security Token Service (STS) - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1b73e8;
+        }
+        h2 {
+            color: #1b73e8;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1b73e8;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #155ab6;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Security Token Service (STS)</h1>
+        <p>AWS Security Token Service (STS) is a web service that enables you to request temporary, limited-privilege credentials for AWS IAM users or federated users. It is used to grant access to AWS resources based on temporary credentials, which is ideal for scenarios where users or applications need temporary access to AWS resources or services.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Temporary Security Credentials:</strong> Issue temporary credentials with defined permissions, expiration time, and scope for secure access to AWS resources.</li>
+            <li><strong>Federated Access:</strong> Allow users from external identity providers (e.g., Google, Facebook, or corporate directories) to access AWS resources using federated identities.</li>
+            <li><strong>Role Assumption:</strong> Enable users or services to assume roles with specific permissions, making it easier to delegate access within AWS accounts or across accounts.</li>
+            <li><strong>Session Duration:</strong> Control the duration of the temporary security credentials, with a maximum validity of 12 hours for most operations.</li>
+            <li><strong>API Operations:</strong> Access key STS API operations including `AssumeRole`, `GetSessionToken`, and `AssumeRoleWithWebIdentity` for obtaining temporary credentials.</li>
+        </ul>
+
+        <h2>Common Use Cases</h2>
+        <ul>
+            <li><strong>Temporary Access:</strong> Provide temporary access to AWS resources for applications, users, or third-party services, reducing the risk associated with long-term credentials.</li>
+            <li><strong>Cross-Account Access:</strong> Enable users or services in one AWS account to access resources in another account by assuming roles.</li>
+            <li><strong>Federated User Access:</strong> Allow users from external identity providers to access AWS resources without needing an IAM user account in AWS.</li>
+            <li><strong>Secure API Access:</strong> Use temporary credentials to secure API calls and operations, enhancing the security posture of your applications.</li>
+            <li><strong>Role Delegation:</strong> Delegate specific permissions to other AWS accounts or services, allowing controlled access to resources and actions.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates the architecture of AWS Security Token Service (STS):</p>
+        <img src="https://miro.medium.com/v2/resize:fit:845/0*efjEBOwC9ESQH9pn.png" alt="AWS Security Token Service Architecture Diagram">
+        <ul>
+            <li><strong>STS Request:</strong> Clients make API requests to STS to obtain temporary security credentials.</li>
+            <li><strong>Temporary Credentials:</strong> STS issues temporary credentials with a defined expiration time and limited permissions.</li>
+            <li><strong>Role Assumption:</strong> Users or services assume roles and receive temporary credentials for accessing AWS resources.</li>
+            <li><strong>Federated Access:</strong> Users from external identity providers are authenticated and granted temporary credentials for accessing AWS services.</li>
+            <li><strong>Session Management:</strong> Credentials are managed and validated by AWS STS during their validity period.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Security Token Service integrates with several AWS services to provide secure, temporary access:</p>
+        <ul>
+            <li><strong>AWS IAM:</strong> Use STS with IAM roles to delegate access and manage permissions for AWS resources.</li>
+            <li><strong>AWS Lambda:</strong> Use temporary credentials to access other AWS services or resources within Lambda functions.</li>
+            <li><strong>AWS CloudFormation:</strong> Enable cross-account access and resource management by assuming roles in CloudFormation stacks.</li>
+            <li><strong>AWS CodePipeline:</strong> Manage access to deployment resources and other services using temporary credentials in CI/CD pipelines.</li>
+            <li><strong>AWS S3:</strong> Use temporary credentials to securely access S3 objects and perform operations without long-term credentials.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Temporary Credentials:</strong> Understand how STS issues temporary credentials and the benefits of using them for secure, short-term access.</li>
+            <li><strong>Role Assumption:</strong> Be familiar with how to use `AssumeRole` to grant temporary access to AWS resources across different accounts or within the same account.</li>
+            <li><strong>Federated Access:</strong> Know how STS integrates with external identity providers to enable federated user access to AWS services.</li>
+            <li><strong>Session Duration:</strong> Remember the maximum duration for temporary credentials and how it affects access control and session management.</li>
+            <li><strong>API Operations:</strong> Review the key STS API operations such as `AssumeRole`, `GetSessionToken`, and `AssumeRoleWithWebIdentity` for obtaining and managing temporary credentials.</li>
+            <li><strong>Security Best Practices:</strong> Understand security best practices for using temporary credentials and managing roles and permissions effectively.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
