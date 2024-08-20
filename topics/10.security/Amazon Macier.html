@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial, scale=1.0">
+    <title>AWS Amazon Macie - Detailed Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1b73e8;
+        }
+        h2 {
+            color: #1b73e8;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-theme .container {
+            background: #444;
+            color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .dark-theme h1, .dark-theme h2 {
+            color: #ffa500;
+        }
+        .dark-theme img {
+            border: 1px solid #555;
+        }
+        .dark-theme a {
+            color: #ffa500;
+        }
+        .dark-theme a:hover {
+            color: #fff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #1b73e8;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #155ab6;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>AWS Amazon Macie</h1>
+        <p>AWS Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect sensitive data in AWS. Macie helps organizations comply with data protection regulations by automating the discovery of sensitive information such as PII (Personally Identifiable Information) and providing visibility into how that data is used and protected.</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Automated Data Discovery:</strong> Macie uses machine learning to automatically discover and classify sensitive data, such as PII and financial information.</li>
+            <li><strong>Data Classification:</strong> Classifies data in Amazon S3 buckets, identifying sensitive information and applying appropriate access controls.</li>
+            <li><strong>Custom Data Types:</strong> Allows you to define and detect custom data types that are specific to your organization’s needs.</li>
+            <li><strong>Compliance and Reporting:</strong> Provides detailed reports and dashboards for compliance with data protection regulations, including GDPR and CCPA.</li>
+            <li><strong>Data Access Monitoring:</strong> Monitors and alerts on data access patterns to detect any unusual or unauthorized access to sensitive data.</li>
+            <li><strong>Integration with AWS Services:</strong> Integrates with AWS CloudTrail, AWS Config, and other AWS services to enhance visibility and compliance.</li>
+        </ul>
+
+        <h2>Common Use Cases</h2>
+        <ul>
+            <li><strong>Regulatory Compliance:</strong> Helps organizations meet data protection and privacy requirements by identifying and securing sensitive information.</li>
+            <li><strong>Data Protection:</strong> Protects sensitive data by automatically classifying and applying access controls based on data sensitivity.</li>
+            <li><strong>Data Access Monitoring:</strong> Monitors data access to identify and respond to potential security incidents or unauthorized access.</li>
+            <li><strong>Risk Management:</strong> Provides visibility into data security risks and compliance gaps, helping organizations manage and mitigate these risks effectively.</li>
+            <li><strong>Incident Response:</strong> Assists in responding to data breaches or security incidents by providing detailed information about sensitive data access and usage.</li>
+        </ul>
+
+        <h2>Architecture Overview</h2>
+        <p>The following diagram illustrates the architecture of AWS Macie:</p>
+        <img src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2021/07/15/Macie-diagram.png" alt="AWS Macie Architecture Diagram">
+        <ul>
+            <li><strong>Data Discovery:</strong> Macie uses machine learning to discover and classify sensitive data in S3 buckets.</li>
+            <li><strong>Data Classification:</strong> Classifies data into predefined and custom categories based on sensitivity and compliance requirements.</li>
+            <li><strong>Access Monitoring:</strong> Monitors data access patterns and provides alerts on any anomalies or unauthorized access.</li>
+            <li><strong>Integration with AWS Services:</strong> Integrates with services like CloudTrail and AWS Config to provide comprehensive data protection and compliance.</li>
+        </ul>
+
+        <h2>Integration with Other AWS Services</h2>
+        <p>AWS Macie integrates with several AWS services to enhance data security and compliance:</p>
+        <ul>
+            <li><strong>AWS S3:</strong> Macie scans S3 buckets to discover and classify sensitive data, applying access controls based on data classification.</li>
+            <li><strong>AWS CloudTrail:</strong> Integrates with CloudTrail to provide visibility into data access patterns and detect any unusual activity.</li>
+            <li><strong>AWS Config:</strong> Works with AWS Config to monitor changes to S3 bucket configurations and ensure compliance with data protection policies.</li>
+            <li><strong>AWS Lambda:</strong> Allows for custom automation and responses based on Macie findings, such as automated alerts or access changes.</li>
+            <li><strong>AWS Security Hub:</strong> Provides a central view of security findings from Macie and other AWS services, helping to manage and respond to security issues.</li>
+        </ul>
+
+        <h2>Things to Remember for the Exam</h2>
+        <ul>
+            <li><strong>Data Classification:</strong> Understand how Macie classifies data and the types of sensitive information it can detect (e.g., PII, financial data).</li>
+            <li><strong>Automated Discovery:</strong> Be familiar with how Macie automatically discovers and classifies sensitive data in S3 buckets.</li>
+            <li><strong>Custom Data Types:</strong> Know how to define and detect custom data types tailored to your organization’s specific needs.</li>
+            <li><strong>Compliance Reporting:</strong> Understand the compliance and reporting features of Macie, including its role in meeting regulations like GDPR and CCPA.</li>
+            <li><strong>Integration with AWS Services:</strong> Be aware of how Macie integrates with other AWS services like CloudTrail and AWS Config for enhanced data protection and monitoring.</li>
+            <li><strong>Access Monitoring:</strong> Know how Macie monitors and alerts on data access patterns to detect potential security incidents.</li>
+            <li><strong>Risk Management:</strong> Understand how Macie helps in managing and mitigating data security risks and responding to incidents.</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
