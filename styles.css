@@ -1,10 +1,11 @@
-/* Default (Light Mode) Styles */
+/* Good, Better, Stylish Website CSS */
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #fff; /* Light background */
+    background-color: #f9f9f9;
     color: #333;
     transition: background-color 0.3s, color 0.3s;
     min-height: 100vh;
@@ -18,87 +19,98 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #FFA500; /* Orange header */
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s;
+    padding: 20px 30px;
+    background-color: #3498db; /* Modern blue header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     color: #fff;
+    transition: background-color 0.3s;
+}
+
+.header h1 {
+    font-size: 2em;
+    margin: 0;
 }
 
 .toggle-btn {
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 10px 15px;
     border: none;
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #3498db;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px;
     transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn:hover {
+    background-color: #e0e0e0;
 }
 
 .expand-all {
     display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #FFA500;
+    width: 90%;
+    padding: 12px;
+    margin: 15px auto;
+    background-color: #2ecc71; /* Modern green expand button */
     color: #fff;
     border: none;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 5px;
     transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .expand-all:hover {
-    background-color: #e68900;
+    background-color: #27ae60;
 }
 
 /* Dark Mode Styles */
 .dark-theme {
-    background-color: #000; /* Black background for dark mode */
-    color: #f0f0f0; /* Light text color for dark mode */
+    background-color: #1a1a1a;
+    color: #e0e0e0;
 }
 
 .dark-theme .header {
-    background-color: #555; /* Grey header for dark mode */
+    background-color: #2c3e50;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 .dark-theme .toggle-btn {
-    background-color: #fff;
-    color: #333;
-}
-
-.dark-theme .expand-all {
-    background-color: #555;
+    background-color: #333;
     color: #fff;
 }
-img {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-}
 
-h1 {
-    color: #010409;
-}
-.dark-theme .expand-all:hover {
+.dark-theme .toggle-btn:hover {
     background-color: #444;
 }
 
+.dark-theme .expand-all {
+    background-color: #34495e;
+}
+
+.dark-theme .expand-all:hover {
+    background-color: #2c3e50;
+}
+
 .dark-theme .left-panel {
-    background-color: #333; /* Dark grey for left panel */
+    background-color: #252525;
 }
 
 .dark-theme .middle-panel {
-    background-color: #222; /* Darker grey for middle panel */
+    background-color: #202020;
 }
 
-.dark-theme a , .dark-theme h2, .dark-theme h3 , .dark-theme .content a{
-    color: #f0f0f0;
+.dark-theme a,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme .content a {
+    color: #e0e0e0;
 }
 
 .dark-theme a.selected {
-    color: #FFA500; /* Highlight selected topic */
+    color: #3498db;
 }
 
 /* Layout Styles */
@@ -108,61 +120,128 @@ main {
     min-height: 100vh;
 }
 
-.left-panel, .middle-panel {
-    padding: 10px;
+.left-panel,
+.middle-panel {
+    padding: 20px;
 }
 
 .left-panel {
-    flex: 0.75; /* Reduced size for left panel */
-    background-color: #f0f0f0; /* Light grey for left panel in light mode */
+    flex: 0.8;
+    background-color: #f0f0f0;
+    border-right: 1px solid #e0e0e0;
 }
 
 .middle-panel {
-    flex: 3.25; /* Increased size for middle panel */
-    background-color: #fff; /* White background for middle panel in light mode */
+    flex: 3.2;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 /* Collapsible Styles */
 .collapsible {
-    background-color: #FFA500; /* Orange for collapsible headers */
+    background-color: #3498db;
     color: white;
     cursor: pointer;
-    padding: 10px;
+    padding: 12px;
     width: 100%;
     text-align: left;
     border: none;
     outline: none;
     font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 5px;
     transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.dark-theme .collapsible , .dark-theme .content {
-    background-color: #555;
+.dark-theme .collapsible,
+.dark-theme .content {
+    background-color: #333;
 }
 
 .collapsible:hover {
-    background-color: #e68900;
+    background-color: #2980b9;
 }
 
 .content {
     display: none;
-    padding: 0 10px;
-    background-color: #f1f1f1; /* Light grey for content in light mode */
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
 }
 
 .content a {
     display: block;
-    padding: 8px;
-    color: black;
+    padding: 10px;
+    color: #333;
     text-decoration: none;
+    transition: background-color 0.2s;
+    border-radius: 3px;
 }
 
 .content a:hover {
-    background-color: #ddd;
+    background-color: #e0e0e0;
 }
 
 /* Highlighting selected topic */
 a.selected {
-    font-weight: bold;
-    color: #FFA500; /* Orange for selected topic */
+    font-weight: 600;
+    color: #3498db;
+}
+
+/* Middle Panel content css */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #f4f4f4;
+}
+.dark-theme .container {
+    background: #444;
+    color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.dark-theme h1, .dark-theme h2 {
+    color: #ffa500;
+}
+.dark-theme img {
+    border: 1px solid #555;
+}
+.dark-theme a {
+    color: #ffa500;
+}
+.dark-theme a:hover {
+    color: #fff;
+}
+
+h1,h2,h3{
+    color:#3498db;
+    margin-bottom: 15px;
+}
+.header-title {
+    color: #333;
+
+}
+
+p,ul{
+    margin-bottom: 20px;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
